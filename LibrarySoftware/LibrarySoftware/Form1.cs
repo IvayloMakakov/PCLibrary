@@ -7,16 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business;
+
+
 
 namespace LibrarySoftware
 {
     public partial class FormLibrarySoftware : Form
     {
+        public LibraryBusiness business;
+
         public FormLibrarySoftware()
         {
             InitializeComponent();
             comboBoxSelection.SelectedIndex = 0;
-            
+            this.business = new LibraryBusiness();
         }
 
         private void comboBoxSelection_SelectedIndexChanged(object sender, EventArgs e)
@@ -59,7 +64,8 @@ namespace LibrarySoftware
 
         private void dateTimePickerDateCreated_ValueChanged(object sender, EventArgs e)
         {
-            dateTimePickerExpirationDAt.Value = dateTimePickerDateCreated.Value.AddYears(1);
+            dateTimePickerExpirationDate.Value = dateTimePickerDateCreated.Value.AddYears(1);
         }
+
     }
 }

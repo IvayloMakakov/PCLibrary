@@ -52,6 +52,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LibraryContext.cs" />
+    <Compile Include="Migrations\202203151635122_Initial.cs" />
+    <Compile Include="Migrations\202203151635122_Initial.designer.cs">
+      <DependentUpon>202203151635122_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203151701351_TableBooks.cs" />
+    <Compile Include="Migrations\202203151701351_TableBooks.designer.cs">
+      <DependentUpon>202203151701351_TableBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203151717158_TableCards.cs" />
+    <Compile Include="Migrations\202203151717158_TableCards.designer.cs">
+      <DependentUpon>202203151717158_TableCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Book.cs" />
     <Compile Include="Model\BookCardRelations.cs" />
     <Compile Include="Model\LibraryCard.cs" />
@@ -60,6 +73,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202203151635122_Initial.resx">
+      <DependentUpon>202203151635122_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203151701351_TableBooks.resx">
+      <DependentUpon>202203151701351_TableBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203151717158_TableCards.resx">
+      <DependentUpon>202203151717158_TableCards.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -51,7 +51,7 @@
             this.buttonAddNewCard = new System.Windows.Forms.Button();
             this.labelExpirationDate = new System.Windows.Forms.Label();
             this.labeldateCreated = new System.Windows.Forms.Label();
-            this.dateTimePickerExpirationDAt = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerExpirationDate = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerDateCreated = new System.Windows.Forms.DateTimePicker();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
@@ -59,10 +59,10 @@
             this.labelEGN = new System.Windows.Forms.Label();
             this.textBoxFullName = new System.Windows.Forms.TextBox();
             this.labelFullName = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTables = new System.Windows.Forms.DataGridView();
             this.groupBoxBook.SuspendLayout();
             this.groupBoxCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTables)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxSelection
@@ -95,7 +95,7 @@
             this.groupBoxBook.Controls.Add(this.labelAuthor);
             this.groupBoxBook.Controls.Add(this.textBoxTitle);
             this.groupBoxBook.Controls.Add(this.labelTitle);
-            this.groupBoxBook.Location = new System.Drawing.Point(1, 0);
+            this.groupBoxBook.Location = new System.Drawing.Point(817, 2);
             this.groupBoxBook.Name = "groupBoxBook";
             this.groupBoxBook.Size = new System.Drawing.Size(354, 374);
             this.groupBoxBook.TabIndex = 2;
@@ -244,7 +244,7 @@
             this.groupBoxCard.Controls.Add(this.buttonAddNewCard);
             this.groupBoxCard.Controls.Add(this.labelExpirationDate);
             this.groupBoxCard.Controls.Add(this.labeldateCreated);
-            this.groupBoxCard.Controls.Add(this.dateTimePickerExpirationDAt);
+            this.groupBoxCard.Controls.Add(this.dateTimePickerExpirationDate);
             this.groupBoxCard.Controls.Add(this.dateTimePickerDateCreated);
             this.groupBoxCard.Controls.Add(this.textBoxEmail);
             this.groupBoxCard.Controls.Add(this.labelEmail);
@@ -252,7 +252,7 @@
             this.groupBoxCard.Controls.Add(this.labelEGN);
             this.groupBoxCard.Controls.Add(this.textBoxFullName);
             this.groupBoxCard.Controls.Add(this.labelFullName);
-            this.groupBoxCard.Location = new System.Drawing.Point(825, 23);
+            this.groupBoxCard.Location = new System.Drawing.Point(3, 2);
             this.groupBoxCard.Name = "groupBoxCard";
             this.groupBoxCard.Size = new System.Drawing.Size(339, 374);
             this.groupBoxCard.TabIndex = 3;
@@ -264,7 +264,7 @@
             this.buttonEditCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEditCard.Location = new System.Drawing.Point(19, 276);
             this.buttonEditCard.Name = "buttonEditCard";
-            this.buttonEditCard.Size = new System.Drawing.Size(303, 31);
+            this.buttonEditCard.Size = new System.Drawing.Size(132, 31);
             this.buttonEditCard.TabIndex = 32;
             this.buttonEditCard.Text = "Edit selected card";
             this.buttonEditCard.UseVisualStyleBackColor = true;
@@ -274,7 +274,7 @@
             this.buttonDeleteCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDeleteCard.Location = new System.Drawing.Point(19, 313);
             this.buttonDeleteCard.Name = "buttonDeleteCard";
-            this.buttonDeleteCard.Size = new System.Drawing.Size(303, 31);
+            this.buttonDeleteCard.Size = new System.Drawing.Size(132, 50);
             this.buttonDeleteCard.TabIndex = 31;
             this.buttonDeleteCard.Text = "Delete selected card";
             this.buttonDeleteCard.UseVisualStyleBackColor = true;
@@ -284,7 +284,7 @@
             this.buttonAddNewCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAddNewCard.Location = new System.Drawing.Point(19, 239);
             this.buttonAddNewCard.Name = "buttonAddNewCard";
-            this.buttonAddNewCard.Size = new System.Drawing.Size(303, 31);
+            this.buttonAddNewCard.Size = new System.Drawing.Size(132, 31);
             this.buttonAddNewCard.TabIndex = 30;
             this.buttonAddNewCard.Text = "Add new card";
             this.buttonAddNewCard.UseVisualStyleBackColor = true;
@@ -307,13 +307,13 @@
             this.labeldateCreated.TabIndex = 26;
             this.labeldateCreated.Text = "Date created:";
             // 
-            // dateTimePickerExpirationDAt
+            // dateTimePickerExpirationDate
             // 
-            this.dateTimePickerExpirationDAt.Enabled = false;
-            this.dateTimePickerExpirationDAt.Location = new System.Drawing.Point(88, 190);
-            this.dateTimePickerExpirationDAt.Name = "dateTimePickerExpirationDAt";
-            this.dateTimePickerExpirationDAt.Size = new System.Drawing.Size(141, 20);
-            this.dateTimePickerExpirationDAt.TabIndex = 18;
+            this.dateTimePickerExpirationDate.Enabled = false;
+            this.dateTimePickerExpirationDate.Location = new System.Drawing.Point(88, 190);
+            this.dateTimePickerExpirationDate.Name = "dateTimePickerExpirationDate";
+            this.dateTimePickerExpirationDate.Size = new System.Drawing.Size(141, 20);
+            this.dateTimePickerExpirationDate.TabIndex = 18;
             // 
             // dateTimePickerDateCreated
             // 
@@ -371,20 +371,20 @@
             this.labelFullName.TabIndex = 19;
             this.labelFullName.Text = "Full name:";
             // 
-            // dataGridView1
+            // dataGridViewTables
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(373, 46);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(408, 320);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridViewTables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTables.Location = new System.Drawing.Point(373, 46);
+            this.dataGridViewTables.Name = "dataGridViewTables";
+            this.dataGridViewTables.Size = new System.Drawing.Size(408, 320);
+            this.dataGridViewTables.TabIndex = 4;
             // 
             // FormLibrarySoftware
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 377);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewTables);
             this.Controls.Add(this.groupBoxCard);
             this.Controls.Add(this.comboBoxSelection);
             this.Controls.Add(this.groupBoxBook);
@@ -398,7 +398,7 @@
             this.groupBoxBook.PerformLayout();
             this.groupBoxCard.ResumeLayout(false);
             this.groupBoxCard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTables)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -427,7 +427,7 @@
         private System.Windows.Forms.Button buttonAddNewCard;
         private System.Windows.Forms.Label labelExpirationDate;
         private System.Windows.Forms.Label labeldateCreated;
-        private System.Windows.Forms.DateTimePicker dateTimePickerExpirationDAt;
+        private System.Windows.Forms.DateTimePicker dateTimePickerExpirationDate;
         private System.Windows.Forms.DateTimePicker dateTimePickerDateCreated;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label labelEmail;
@@ -435,7 +435,7 @@
         private System.Windows.Forms.Label labelEGN;
         private System.Windows.Forms.TextBox textBoxFullName;
         private System.Windows.Forms.Label labelFullName;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewTables;
     }
 }
 
