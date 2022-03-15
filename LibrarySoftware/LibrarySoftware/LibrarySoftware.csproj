@@ -95,6 +95,10 @@
       <Project>{2B82CE21-210E-44CD-8302-9FE700C04BFE}</Project>
       <Name>Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{CE826480-3379-443D-A58C-9AEBB2F1937D}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -8,8 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Business;
-
-
+using Data.Model;
 
 namespace LibrarySoftware
 {
@@ -67,5 +66,9 @@ namespace LibrarySoftware
             dateTimePickerExpirationDate.Value = dateTimePickerDateCreated.Value.AddYears(1);
         }
 
+        private void buttonAddBook_Click(object sender, EventArgs e)
+        {
+            Book book = new Book()
+        }
     }
 }

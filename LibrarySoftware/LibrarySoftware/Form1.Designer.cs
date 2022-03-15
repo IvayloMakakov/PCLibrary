@@ -95,7 +95,7 @@
             this.groupBoxBook.Controls.Add(this.labelAuthor);
             this.groupBoxBook.Controls.Add(this.textBoxTitle);
             this.groupBoxBook.Controls.Add(this.labelTitle);
-            this.groupBoxBook.Location = new System.Drawing.Point(817, 2);
+            this.groupBoxBook.Location = new System.Drawing.Point(2, 0);
             this.groupBoxBook.Name = "groupBoxBook";
             this.groupBoxBook.Size = new System.Drawing.Size(354, 374);
             this.groupBoxBook.TabIndex = 2;
@@ -131,6 +131,7 @@
             this.buttonAddBook.TabIndex = 15;
             this.buttonAddBook.Text = "Add new book";
             this.buttonAddBook.UseVisualStyleBackColor = true;
+            this.buttonAddBook.Click += new System.EventHandler(this.buttonAddBook_Click);
             // 
             // labelIsTaken
             // 
@@ -252,7 +253,7 @@
             this.groupBoxCard.Controls.Add(this.labelEGN);
             this.groupBoxCard.Controls.Add(this.textBoxFullName);
             this.groupBoxCard.Controls.Add(this.labelFullName);
-            this.groupBoxCard.Location = new System.Drawing.Point(3, 2);
+            this.groupBoxCard.Location = new System.Drawing.Point(825, 0);
             this.groupBoxCard.Name = "groupBoxCard";
             this.groupBoxCard.Size = new System.Drawing.Size(339, 374);
             this.groupBoxCard.TabIndex = 3;
@@ -264,7 +265,7 @@
             this.buttonEditCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEditCard.Location = new System.Drawing.Point(19, 276);
             this.buttonEditCard.Name = "buttonEditCard";
-            this.buttonEditCard.Size = new System.Drawing.Size(132, 31);
+            this.buttonEditCard.Size = new System.Drawing.Size(303, 31);
             this.buttonEditCard.TabIndex = 32;
             this.buttonEditCard.Text = "Edit selected card";
             this.buttonEditCard.UseVisualStyleBackColor = true;
@@ -274,7 +275,7 @@
             this.buttonDeleteCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDeleteCard.Location = new System.Drawing.Point(19, 313);
             this.buttonDeleteCard.Name = "buttonDeleteCard";
-            this.buttonDeleteCard.Size = new System.Drawing.Size(132, 50);
+            this.buttonDeleteCard.Size = new System.Drawing.Size(303, 50);
             this.buttonDeleteCard.TabIndex = 31;
             this.buttonDeleteCard.Text = "Delete selected card";
             this.buttonDeleteCard.UseVisualStyleBackColor = true;
@@ -284,7 +285,7 @@
             this.buttonAddNewCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAddNewCard.Location = new System.Drawing.Point(19, 239);
             this.buttonAddNewCard.Name = "buttonAddNewCard";
-            this.buttonAddNewCard.Size = new System.Drawing.Size(132, 31);
+            this.buttonAddNewCard.Size = new System.Drawing.Size(303, 31);
             this.buttonAddNewCard.TabIndex = 30;
             this.buttonAddNewCard.Text = "Add new card";
             this.buttonAddNewCard.UseVisualStyleBackColor = true;

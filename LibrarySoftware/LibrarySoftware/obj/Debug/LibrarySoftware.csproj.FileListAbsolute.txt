@@ -19,3 +19,11 @@ D:\Actual Library\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySof
 D:\Actual Library\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.CoreCompileInputs.cache
 D:\Actual Library\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.exe
 D:\Actual Library\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Business.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Business.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Business.dll.config
+C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.xml
+C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.CopyComplete
