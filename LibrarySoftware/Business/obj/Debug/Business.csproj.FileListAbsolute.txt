@@ -10,3 +10,6 @@ C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Busines
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.csproj.CopyComplete
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.dll
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Business\bin\Debug\Data.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Business\bin\Debug\Data.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Business\bin\Debug\Data.dll.config

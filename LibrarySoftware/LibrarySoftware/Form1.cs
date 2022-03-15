@@ -68,7 +68,14 @@ namespace LibrarySoftware
 
         private void buttonAddBook_Click(object sender, EventArgs e)
         {
-            Book book = new Book()
+            Book book = new Book();
+            book.Title = textBoxTitle.Text;
+            book.Author = textBoxAuthor.Text;
+            book.Category = textBoxCategory.Text;
+            book.DateTaken = dateTimePickerTaken.Value;
+            book.DateReturned = dateTimePickerReturn.Value;
+
+            business.AddBook(book);
         }
     }
 }
