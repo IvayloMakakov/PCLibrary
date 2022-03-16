@@ -30,6 +30,8 @@
         {
             this.comboBoxSelection = new System.Windows.Forms.ComboBox();
             this.groupBoxBook = new System.Windows.Forms.GroupBox();
+            this.comboBoxTakenByWho = new System.Windows.Forms.ComboBox();
+            this.labelTakenBy = new System.Windows.Forms.Label();
             this.buttonEditBook = new System.Windows.Forms.Button();
             this.buttonDeleteBook = new System.Windows.Forms.Button();
             this.buttonAddBook = new System.Windows.Forms.Button();
@@ -59,10 +61,15 @@
             this.labelEGN = new System.Windows.Forms.Label();
             this.textBoxFullName = new System.Windows.Forms.TextBox();
             this.labelFullName = new System.Windows.Forms.Label();
-            this.dataGridViewTables = new System.Windows.Forms.DataGridView();
+            this.dataGridViewBooks = new System.Windows.Forms.DataGridView();
+            this.pictureBoxMagnifyingGlass = new System.Windows.Forms.PictureBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.dataGridViewCards = new System.Windows.Forms.DataGridView();
             this.groupBoxBook.SuspendLayout();
             this.groupBoxCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTables)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMagnifyingGlass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCards)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxSelection
@@ -80,6 +87,8 @@
             // 
             // groupBoxBook
             // 
+            this.groupBoxBook.Controls.Add(this.comboBoxTakenByWho);
+            this.groupBoxBook.Controls.Add(this.labelTakenBy);
             this.groupBoxBook.Controls.Add(this.buttonEditBook);
             this.groupBoxBook.Controls.Add(this.buttonDeleteBook);
             this.groupBoxBook.Controls.Add(this.buttonAddBook);
@@ -102,10 +111,30 @@
             this.groupBoxBook.TabStop = false;
             this.groupBoxBook.Text = "Add book";
             // 
+            // comboBoxTakenByWho
+            // 
+            this.comboBoxTakenByWho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxTakenByWho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTakenByWho.Location = new System.Drawing.Point(90, 227);
+            this.comboBoxTakenByWho.Name = "comboBoxTakenByWho";
+            this.comboBoxTakenByWho.Size = new System.Drawing.Size(234, 21);
+            this.comboBoxTakenByWho.TabIndex = 20;
+            this.comboBoxTakenByWho.Visible = false;
+            // 
+            // labelTakenBy
+            // 
+            this.labelTakenBy.AutoSize = true;
+            this.labelTakenBy.Location = new System.Drawing.Point(29, 230);
+            this.labelTakenBy.Name = "labelTakenBy";
+            this.labelTakenBy.Size = new System.Drawing.Size(55, 13);
+            this.labelTakenBy.TabIndex = 19;
+            this.labelTakenBy.Text = "Taken by:";
+            this.labelTakenBy.Visible = false;
+            // 
             // buttonEditBook
             // 
             this.buttonEditBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEditBook.Location = new System.Drawing.Point(21, 280);
+            this.buttonEditBook.Location = new System.Drawing.Point(21, 297);
             this.buttonEditBook.Name = "buttonEditBook";
             this.buttonEditBook.Size = new System.Drawing.Size(303, 31);
             this.buttonEditBook.TabIndex = 17;
@@ -115,7 +144,7 @@
             // buttonDeleteBook
             // 
             this.buttonDeleteBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDeleteBook.Location = new System.Drawing.Point(21, 317);
+            this.buttonDeleteBook.Location = new System.Drawing.Point(21, 333);
             this.buttonDeleteBook.Name = "buttonDeleteBook";
             this.buttonDeleteBook.Size = new System.Drawing.Size(303, 31);
             this.buttonDeleteBook.TabIndex = 16;
@@ -125,7 +154,7 @@
             // buttonAddBook
             // 
             this.buttonAddBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddBook.Location = new System.Drawing.Point(21, 243);
+            this.buttonAddBook.Location = new System.Drawing.Point(21, 261);
             this.buttonAddBook.Name = "buttonAddBook";
             this.buttonAddBook.Size = new System.Drawing.Size(303, 31);
             this.buttonAddBook.TabIndex = 15;
@@ -372,20 +401,59 @@
             this.labelFullName.TabIndex = 19;
             this.labelFullName.Text = "Full name:";
             // 
-            // dataGridViewTables
+            // dataGridViewBooks
             // 
-            this.dataGridViewTables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTables.Location = new System.Drawing.Point(373, 46);
-            this.dataGridViewTables.Name = "dataGridViewTables";
-            this.dataGridViewTables.Size = new System.Drawing.Size(408, 320);
-            this.dataGridViewTables.TabIndex = 4;
+            this.dataGridViewBooks.AllowUserToAddRows = false;
+            this.dataGridViewBooks.AllowUserToDeleteRows = false;
+            this.dataGridViewBooks.AllowUserToOrderColumns = true;
+            this.dataGridViewBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBooks.Location = new System.Drawing.Point(373, 46);
+            this.dataGridViewBooks.Name = "dataGridViewBooks";
+            this.dataGridViewBooks.ReadOnly = true;
+            this.dataGridViewBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewBooks.Size = new System.Drawing.Size(408, 161);
+            this.dataGridViewBooks.TabIndex = 4;
+            // 
+            // pictureBoxMagnifyingGlass
+            // 
+            this.pictureBoxMagnifyingGlass.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBoxMagnifyingGlass.Image = global::LibrarySoftware.Properties.Resources.searchTransparent;
+            this.pictureBoxMagnifyingGlass.Location = new System.Drawing.Point(554, 12);
+            this.pictureBoxMagnifyingGlass.Name = "pictureBoxMagnifyingGlass";
+            this.pictureBoxMagnifyingGlass.Size = new System.Drawing.Size(19, 20);
+            this.pictureBoxMagnifyingGlass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMagnifyingGlass.TabIndex = 8;
+            this.pictureBoxMagnifyingGlass.TabStop = false;
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(579, 12);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(202, 20);
+            this.textBoxSearch.TabIndex = 7;
+            // 
+            // dataGridViewCards
+            // 
+            this.dataGridViewCards.AllowUserToAddRows = false;
+            this.dataGridViewCards.AllowUserToDeleteRows = false;
+            this.dataGridViewCards.AllowUserToOrderColumns = true;
+            this.dataGridViewCards.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCards.Location = new System.Drawing.Point(373, 206);
+            this.dataGridViewCards.Name = "dataGridViewCards";
+            this.dataGridViewCards.ReadOnly = true;
+            this.dataGridViewCards.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewCards.Size = new System.Drawing.Size(408, 168);
+            this.dataGridViewCards.TabIndex = 9;
             // 
             // FormLibrarySoftware
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 377);
-            this.Controls.Add(this.dataGridViewTables);
+            this.Controls.Add(this.dataGridViewCards);
+            this.Controls.Add(this.pictureBoxMagnifyingGlass);
+            this.Controls.Add(this.textBoxSearch);
+            this.Controls.Add(this.dataGridViewBooks);
             this.Controls.Add(this.groupBoxCard);
             this.Controls.Add(this.comboBoxSelection);
             this.Controls.Add(this.groupBoxBook);
@@ -395,12 +463,16 @@
             this.Name = "FormLibrarySoftware";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Software";
+            this.Load += new System.EventHandler(this.FormLibrarySoftware_Load);
             this.groupBoxBook.ResumeLayout(false);
             this.groupBoxBook.PerformLayout();
             this.groupBoxCard.ResumeLayout(false);
             this.groupBoxCard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTables)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMagnifyingGlass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCards)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -436,7 +508,12 @@
         private System.Windows.Forms.Label labelEGN;
         private System.Windows.Forms.TextBox textBoxFullName;
         private System.Windows.Forms.Label labelFullName;
-        private System.Windows.Forms.DataGridView dataGridViewTables;
+        private System.Windows.Forms.DataGridView dataGridViewBooks;
+        private System.Windows.Forms.PictureBox pictureBoxMagnifyingGlass;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.DataGridView dataGridViewCards;
+        private System.Windows.Forms.ComboBox comboBoxTakenByWho;
+        private System.Windows.Forms.Label labelTakenBy;
     }
 }
 

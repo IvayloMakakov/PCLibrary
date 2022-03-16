@@ -19,9 +19,9 @@ namespace Data.Model
 
         public string Category { get; set; }
 
-        public DateTime DateTaken { get; set; }
+        public DateTime? DateTaken { get; set; }
 
-        public DateTime DateReturned { get; set; }
+        public DateTime? DateReturned { get; set; }
 
         public ICollection<BookCardRelations> BookCardRelations { get; set; }
     }

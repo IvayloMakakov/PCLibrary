@@ -21,6 +21,11 @@ namespace LibrarySoftware
             InitializeComponent();
             comboBoxSelection.SelectedIndex = 0;
             this.business = new LibraryBusiness();
+            UpdateGrid();
+            foreach (var card in business.GetAllCards())
+            {
+                comboBoxTakenByWho.Items.Add(card);
+            }
         }
 
         private void comboBoxSelection_SelectedIndexChanged(object sender, EventArgs e)
@@ -46,6 +51,8 @@ namespace LibrarySoftware
                 labelReturnDate.Visible = true;
                 dateTimePickerReturn.Visible = true;
                 dateTimePickerTaken.Visible = true;
+                labelTakenBy.Visible = true;
+                comboBoxTakenByWho.Visible = true;
             }
             else
             {
@@ -53,6 +60,8 @@ namespace LibrarySoftware
                 labelReturnDate.Visible = false;
                 dateTimePickerReturn.Visible = false;
                 dateTimePickerTaken.Visible = false;
+                labelTakenBy.Visible = false;
+                comboBoxTakenByWho.Visible = false;
             }
         }
 
@@ -72,10 +81,31 @@ namespace LibrarySoftware
             book.Title = textBoxTitle.Text;
             book.Author = textBoxAuthor.Text;
             book.Category = textBoxCategory.Text;
-            book.DateTaken = dateTimePickerTaken.Value;
-            book.DateReturned = dateTimePickerReturn.Value;
+            if (checkBoxTaken.Checked)
+            {
+                book.DateTaken = dateTimePickerTaken.Value;
+                book.DateReturned = dateTimePickerReturn.Value;
+            }
+            else
+            {
+                book.DateTaken = null;
+                book.DateReturned = null;
+            }
+            
 
             business.AddBook(book);
+            UpdateGrid();
+        }
+
+        private void UpdateGrid()
+        {
+            this.dataGridViewBooks.DataSource = this.business.GetAllBooks();
+            this.dataGridViewCards.DataSource = this.business.GetAllCards();
+        }
+
+        private void FormLibrarySoftware_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

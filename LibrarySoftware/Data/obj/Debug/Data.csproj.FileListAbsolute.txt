@@ -14,3 +14,4 @@ C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Data\ob
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.GenerateResource.cache
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableBooks.resources
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableCards.resources
+C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.NullableDates.resources
