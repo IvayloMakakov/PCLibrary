@@ -24,8 +24,9 @@ namespace LibrarySoftware
             UpdateGrid();
             foreach (var card in business.GetAllCards())
             {
-                comboBoxTakenByWho.Items.Add(card);
+                comboBoxTakenByWho.Items.Add(card.Id + ", " + card.FullName);
             }
+            SetDates();
         }
 
         private void comboBoxSelection_SelectedIndexChanged(object sender, EventArgs e)
@@ -75,6 +76,12 @@ namespace LibrarySoftware
             dateTimePickerExpirationDate.Value = dateTimePickerDateCreated.Value.AddYears(1);
         }
 
+        private void SetDates()
+        {
+            dateTimePickerReturn.Value = dateTimePickerTaken.Value.AddDays(30);
+            dateTimePickerExpirationDate.Value = dateTimePickerDateCreated.Value.AddYears(1);
+        }
+
         private void buttonAddBook_Click(object sender, EventArgs e)
         {
             Book book = new Book();
@@ -91,6 +98,11 @@ namespace LibrarySoftware
                 book.DateTaken = null;
                 book.DateReturned = null;
             }
+            /*int index = comboBoxTakenByWho.SelectedIndex;
+            BookCardRelations relations = new BookCardRelations();
+            relations.Book = book;
+            relations.LibraryCard = business.GetAllCards()[index];
+            book.BookCardRelations.Add(relations);*/
             
 
             business.AddBook(book);
@@ -103,9 +115,19 @@ namespace LibrarySoftware
             this.dataGridViewCards.DataSource = this.business.GetAllCards();
         }
 
-        private void FormLibrarySoftware_Load(object sender, EventArgs e)
+        private void buttonAddNewCard_Click(object sender, EventArgs e)
         {
+            LibraryCard card = new LibraryCard();
 
+            card.FullName = textBoxFullName.Text;
+            card.EGN = textBoxEgn.Text;
+            card.Email = textBoxEmail.Text;
+            card.DateCreated = dateTimePickerDateCreated.Value;
+            card.ExpirationDate = dateTimePickerExpirationDate.Value;
+
+            this.business.AddCard(card);
+            UpdateGrid();
+            comboBoxTakenByWho.Items.Add(card.Id + ", " + card.FullName);
         }
     }
 }

@@ -282,7 +282,7 @@
             this.groupBoxCard.Controls.Add(this.labelEGN);
             this.groupBoxCard.Controls.Add(this.textBoxFullName);
             this.groupBoxCard.Controls.Add(this.labelFullName);
-            this.groupBoxCard.Location = new System.Drawing.Point(825, 0);
+            this.groupBoxCard.Location = new System.Drawing.Point(362, 0);
             this.groupBoxCard.Name = "groupBoxCard";
             this.groupBoxCard.Size = new System.Drawing.Size(339, 374);
             this.groupBoxCard.TabIndex = 3;
@@ -318,6 +318,7 @@
             this.buttonAddNewCard.TabIndex = 30;
             this.buttonAddNewCard.Text = "Add new card";
             this.buttonAddNewCard.UseVisualStyleBackColor = true;
+            this.buttonAddNewCard.Click += new System.EventHandler(this.buttonAddNewCard_Click);
             // 
             // labelExpirationDate
             // 
@@ -450,11 +451,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 377);
+            this.Controls.Add(this.groupBoxCard);
             this.Controls.Add(this.dataGridViewCards);
             this.Controls.Add(this.pictureBoxMagnifyingGlass);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.dataGridViewBooks);
-            this.Controls.Add(this.groupBoxCard);
             this.Controls.Add(this.comboBoxSelection);
             this.Controls.Add(this.groupBoxBook);
             this.MaximizeBox = false;
@@ -463,7 +464,6 @@
             this.Name = "FormLibrarySoftware";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Software";
-            this.Load += new System.EventHandler(this.FormLibrarySoftware_Load);
             this.groupBoxBook.ResumeLayout(false);
             this.groupBoxBook.PerformLayout();
             this.groupBoxCard.ResumeLayout(false);
