@@ -144,6 +144,7 @@
             this.buttonEditBook.TabIndex = 17;
             this.buttonEditBook.Text = "Edit selected book";
             this.buttonEditBook.UseVisualStyleBackColor = true;
+            this.buttonEditBook.Click += new System.EventHandler(this.buttonEditBook_Click);
             // 
             // buttonDeleteBook
             // 
@@ -334,6 +335,7 @@
             this.buttonEditCard.TabIndex = 32;
             this.buttonEditCard.Text = "Edit selected card";
             this.buttonEditCard.UseVisualStyleBackColor = true;
+            this.buttonEditCard.Click += new System.EventHandler(this.buttonEditCard_Click);
             // 
             // buttonDeleteCard
             // 

@@ -202,5 +202,62 @@ namespace LibrarySoftware
         {
 
         }
+
+        private void buttonEditBook_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewBooks.SelectedRows.Count > 0)
+            {
+                var item = dataGridViewBooks.SelectedRows[0].Cells;
+                int id = (int)item[0].Value;
+                //editId = id;
+                UpdateTextBoxesBooks(id);
+                //ToggleSaveUpdate();
+                DisabeSelectBooks();
+            }
+
+        }
+
+        private void DisabeSelectBooks()
+        {
+            dataGridViewBooks.Enabled = false;
+        }
+
+        private void UpdateTextBoxesBooks( int id)
+        {
+            Book book = this.business.GetBookWithId(id);
+            textBoxTitle.Text = book.Title;
+            textBoxAuthor.Text= book.Author;
+            textBoxCategory.Text= book.Category;
+            dateTimePickerTaken.Value = book.DateTaken.Value;
+            dateTimePickerReturn.Value = book.DateReturned.Value;
+        }
+
+        private void buttonEditCard_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewCards.SelectedRows.Count > 0)
+            {
+                var item = dataGridViewCards.SelectedRows[0].Cells;
+                int id = (int)item[0].Value;
+                //editId = id;
+                UpdateTextBoxesCards(id);
+                //ToggleSaveUpdate();
+                DisabeSelectCards();
+            }
+        }
+
+        private void DisabeSelectCards()
+        {
+            dataGridViewCards.Enabled = false;
+        }
+
+        private void UpdateTextBoxesCards(int id)
+        {
+            LibraryCard card = this.business.GetCardWithId(id);
+            textBoxFullName.Text = card.FullName;
+            textBoxEgn.Text = card.EGN;
+            textBoxEmail.Text= card.Email;
+            dateTimePickerDateCreated.Value=card.DateCreated;
+            dateTimePickerExpirationDate.Value=card.ExpirationDate;
+        }
     }
 }
