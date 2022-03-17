@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Business
 {
@@ -19,73 +20,122 @@ namespace Business
 
         public List<Book> GetAllBooks()
         {
-            return libraryContext.Books.ToList();
+            return this.libraryContext.Books.ToList();
         }
 
         public Book GetBookWithId(int id)
         {
-            return libraryContext.Books.Find(id);
+            return this.libraryContext.Books.Find(id);
         }
 
         public List<LibraryCard> GetAllCards()
         {
-            return libraryContext.LibraryCards.ToList();
+            return this.libraryContext.LibraryCards.ToList();
         }
 
         public LibraryCard GetCardWithId(int id)
         {
-            return libraryContext.LibraryCards.Find(id);
+            return this.libraryContext.LibraryCards.Find(id);
         }
 
         public void AddBook(Book book)
         {
-            libraryContext.Books.Add(book);
-            libraryContext.SaveChanges();
+            try
+            {
+                this.libraryContext.Books.Add(book);
+                this.libraryContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when adding a book.");
+            }
+
         }
 
         public void UpdateBook(Book book)
         {
-            Book updatedBook = libraryContext.Books.Find(book.BookId);
-            if (updatedBook != null)
+            try
             {
-                libraryContext.Entry(updatedBook).CurrentValues.SetValues(book);
-                libraryContext.SaveChanges();
+                Book updatedBook = this.libraryContext.Books.Find(book.BookId);
+                if (updatedBook != null)
+                {
+                    this.libraryContext.Entry(updatedBook).CurrentValues.SetValues(book);
+                    this.libraryContext.SaveChanges();
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when updating a book.");
+            }
+
         }
 
         public void DeleteBook(int id)
         {
-            Book product = libraryContext.Books.Find(id);
-            if (product != null)
+            try
             {
-                libraryContext.Books.Remove(product);
-                libraryContext.SaveChanges();
+                Book product = this.libraryContext.Books.Find(id);
+                if (product != null)
+                {
+                    this.libraryContext.Books.Remove(product);
+                    this.libraryContext.SaveChanges();
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when deleting a book.");
+            }
+
         }
 
         public void AddCard(LibraryCard card)
         {
-            libraryContext.LibraryCards.Add(card);
-            libraryContext.SaveChanges();
+
+            try
+            {
+                this.libraryContext.LibraryCards.Add(card);
+                this.libraryContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when adding a card.");
+            }
         }
 
         public void UpdateCard(LibraryCard card)
         {
-            LibraryCard updatedCard = libraryContext.LibraryCards.Find(card.Id);
-            if (updatedCard != null)
+            try
             {
-                libraryContext.Entry(updatedCard).CurrentValues.SetValues(card);
-                libraryContext.SaveChanges();
+                LibraryCard updatedCard = this.libraryContext.LibraryCards.Find(card.Id);
+                if (updatedCard != null)
+                {
+                    this.libraryContext.Entry(updatedCard).CurrentValues.SetValues(card);
+                    this.libraryContext.SaveChanges();
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when updating a card.");
+            }
+
+
         }
 
         public void DeleteCard(int id)
         {
-            LibraryCard card = libraryContext.LibraryCards.Find(id);
-            if (card != null)
+
+            try
             {
-                libraryContext.LibraryCards.Remove(card);
-                libraryContext.SaveChanges();
+                LibraryCard card = this.libraryContext.LibraryCards.Find(id);
+                if (card != null)
+                {
+                    this.libraryContext.LibraryCards.Remove(card);
+                    this.libraryContext.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when deleting a card.");
             }
         }
 
@@ -99,13 +149,21 @@ namespace Business
 
         public void CreateRelation(Book book, LibraryCard card)
         {
-            BookCardRelations relations = new BookCardRelations();
-            relations.BookId = book.BookId;
-            relations.Book = book;
-            relations.LibraryCardId = card.Id;
-            relations.LibraryCard = card;
-            libraryContext.BookCardRelations.Add(relations);
-            libraryContext.SaveChanges();
+            try
+            {
+                BookCardRelations relations = new BookCardRelations();
+                relations.BookId = book.BookId;
+                relations.Book = book;
+                relations.LibraryCardId = card.Id;
+                relations.LibraryCard = card;
+                this.libraryContext.BookCardRelations.Add(relations);
+                this.libraryContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when creating a relation.");
+            }
+
         }
     }
 }

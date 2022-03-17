@@ -88,47 +88,70 @@ namespace LibrarySoftware
 
         private void buttonAddBook_Click(object sender, EventArgs e)
         {
-            Book book = new Book();
-            book.Title = textBoxTitle.Text;
-            book.Author = textBoxAuthor.Text;
-            book.Category = textBoxCategory.Text;
-            if (checkBoxTaken.Checked)
+            try
             {
-                book.DateTaken = dateTimePickerTaken.Value;
-                book.DateReturned = dateTimePickerReturn.Value;
-                int cardId = int.Parse(comboBoxTakenByWho.Text.Split(',').ToArray()[0]);
-                this.business.CreateRelation(book, business.GetAllCards().Where(x => x.Id == cardId).First());
-            }
-            else
-            {
-                book.DateTaken = null;
-                book.DateReturned = null;
-            }
-            
+                Book book = new Book();
+                book.Title = textBoxTitle.Text;
+                book.Author = textBoxAuthor.Text;
+                book.Category = textBoxCategory.Text;
+                if (checkBoxTaken.Checked)
+                {
+                    book.DateTaken = dateTimePickerTaken.Value;
+                    book.DateReturned = dateTimePickerReturn.Value;
+                    int cardId = int.Parse(comboBoxTakenByWho.Text.Split(',').ToArray()[0]);
+                    this.business.CreateRelation(book, business.GetAllCards().Where(x => x.Id == cardId).First());
+                }
+                else
+                {
+                    book.DateTaken = null;
+                    book.DateReturned = null;
+                }
 
-            business.AddBook(book);
-            UpdateGrid();
+
+                business.AddBook(book);
+                UpdateGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the add book button.");
+            }
+
         }
 
         private void UpdateGrid()
         {
-            this.dataGridViewBooks.DataSource = this.business.GetAllBooks();
-            this.dataGridViewCards.DataSource = this.business.GetAllCards();
+            try
+            {
+                this.dataGridViewBooks.DataSource = this.business.GetAllBooks();
+                this.dataGridViewCards.DataSource = this.business.GetAllCards();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when updating data grid.");
+            }
         }
 
         private void buttonAddNewCard_Click(object sender, EventArgs e)
         {
-            LibraryCard card = new LibraryCard();
+            try
+            {
+                LibraryCard card = new LibraryCard();
 
-            card.FullName = textBoxFullName.Text;
-            card.EGN = textBoxEgn.Text;
-            card.Email = textBoxEmail.Text;
-            card.DateCreated = dateTimePickerDateCreated.Value;
-            card.ExpirationDate = dateTimePickerExpirationDate.Value;
+                card.FullName = textBoxFullName.Text;
+                card.EGN = textBoxEgn.Text;
+                card.Email = textBoxEmail.Text;
+                card.DateCreated = dateTimePickerDateCreated.Value;
+                card.ExpirationDate = dateTimePickerExpirationDate.Value;
 
-            this.business.AddCard(card);
-            UpdateGrid();
-            comboBoxTakenByWho.Items.Add(card.Id + ", " + card.FullName);
+                this.business.AddCard(card);
+                UpdateGrid();
+                comboBoxTakenByWho.Items.Add(card.Id + ", " + card.FullName);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the add new card button.");
+            }
+
         }
 
         private void pictureBoxMagnifyingGlass_Click(object sender, EventArgs e)
@@ -138,11 +161,19 @@ namespace LibrarySoftware
 
         private void buttonDeleteBook_Click(object sender, EventArgs e)
         {
-            DataGridViewCellCollection row = dataGridViewBooks.SelectedRows[0].Cells;
-            int id = (int)row[0].Value;
-            business.DeleteBook(id);
-            UpdateGrid();
-            dataGridViewBooks.ClearSelection();
+            try
+            {
+                DataGridViewCellCollection row = dataGridViewBooks.SelectedRows[0].Cells;
+                int id = (int)row[0].Value;
+                business.DeleteBook(id);
+                UpdateGrid();
+                dataGridViewBooks.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the delete book button.");
+            }
+
         }
 
         private void dataGridViewBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -151,12 +182,20 @@ namespace LibrarySoftware
         }
 
         private void buttonDeleteCard_Click(object sender, EventArgs e)
-        {            
-            DataGridViewCellCollection row = dataGridViewCards.SelectedRows[0].Cells;
-            int id = (int)row[0].Value;
-            business.DeleteCard(id);
-            UpdateGrid();
-            dataGridViewBooks.ClearSelection();
+        {
+            try
+            {
+
+                DataGridViewCellCollection row = dataGridViewCards.SelectedRows[0].Cells;
+                int id = (int)row[0].Value;
+                business.DeleteCard(id);
+                UpdateGrid();
+                dataGridViewBooks.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the delete card button.");
+            }
         }
 
         private void FormLibrarySoftware_Load(object sender, EventArgs e)
