@@ -12,6 +12,7 @@ namespace Data
     {
         public DbSet<Book> Books { get; set; }
         public DbSet<LibraryCard> LibraryCards { get; set; }
+        public DbSet<BookCardRelations> BookCardRelations { get; set; }
 
         public LibraryContext() : base("name=Library")
         {

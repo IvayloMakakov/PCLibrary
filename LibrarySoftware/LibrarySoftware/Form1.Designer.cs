@@ -48,6 +48,9 @@
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.groupBoxCard = new System.Windows.Forms.GroupBox();
+            this.buttonTakeSelected = new System.Windows.Forms.Button();
+            this.buttonTakeById = new System.Windows.Forms.Button();
+            this.comboBoxId = new System.Windows.Forms.ComboBox();
             this.buttonEditCard = new System.Windows.Forms.Button();
             this.buttonDeleteCard = new System.Windows.Forms.Button();
             this.buttonAddNewCard = new System.Windows.Forms.Button();
@@ -66,9 +69,6 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.dataGridViewCards = new System.Windows.Forms.DataGridView();
             this.comboBoxSearchFor = new System.Windows.Forms.ComboBox();
-            this.comboBoxId = new System.Windows.Forms.ComboBox();
-            this.buttonTakeById = new System.Windows.Forms.Button();
-            this.buttonTakeSelected = new System.Windows.Forms.Button();
             this.groupBoxBook.SuspendLayout();
             this.groupBoxCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).BeginInit();
@@ -297,6 +297,34 @@
             this.groupBoxCard.TabStop = false;
             this.groupBoxCard.Text = "Add card";
             // 
+            // buttonTakeSelected
+            // 
+            this.buttonTakeSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonTakeSelected.Location = new System.Drawing.Point(179, 313);
+            this.buttonTakeSelected.Name = "buttonTakeSelected";
+            this.buttonTakeSelected.Size = new System.Drawing.Size(154, 50);
+            this.buttonTakeSelected.TabIndex = 35;
+            this.buttonTakeSelected.Text = "Take selected book";
+            this.buttonTakeSelected.UseVisualStyleBackColor = true;
+            // 
+            // buttonTakeById
+            // 
+            this.buttonTakeById.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonTakeById.Location = new System.Drawing.Point(179, 276);
+            this.buttonTakeById.Name = "buttonTakeById";
+            this.buttonTakeById.Size = new System.Drawing.Size(154, 31);
+            this.buttonTakeById.TabIndex = 34;
+            this.buttonTakeById.Text = "Take book by ID";
+            this.buttonTakeById.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxId
+            // 
+            this.comboBoxId.FormattingEnabled = true;
+            this.comboBoxId.Location = new System.Drawing.Point(187, 244);
+            this.comboBoxId.Name = "comboBoxId";
+            this.comboBoxId.Size = new System.Drawing.Size(135, 21);
+            this.comboBoxId.TabIndex = 33;
+            // 
             // buttonEditCard
             // 
             this.buttonEditCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -475,34 +503,6 @@
             this.comboBoxSearchFor.Name = "comboBoxSearchFor";
             this.comboBoxSearchFor.Size = new System.Drawing.Size(18, 21);
             this.comboBoxSearchFor.TabIndex = 10;
-            // 
-            // comboBoxId
-            // 
-            this.comboBoxId.FormattingEnabled = true;
-            this.comboBoxId.Location = new System.Drawing.Point(187, 245);
-            this.comboBoxId.Name = "comboBoxId";
-            this.comboBoxId.Size = new System.Drawing.Size(135, 21);
-            this.comboBoxId.TabIndex = 33;
-            // 
-            // buttonTakeById
-            // 
-            this.buttonTakeById.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonTakeById.Location = new System.Drawing.Point(179, 276);
-            this.buttonTakeById.Name = "buttonTakeById";
-            this.buttonTakeById.Size = new System.Drawing.Size(154, 31);
-            this.buttonTakeById.TabIndex = 34;
-            this.buttonTakeById.Text = "Take book by ID";
-            this.buttonTakeById.UseVisualStyleBackColor = true;
-            // 
-            // buttonTakeSelected
-            // 
-            this.buttonTakeSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonTakeSelected.Location = new System.Drawing.Point(179, 313);
-            this.buttonTakeSelected.Name = "buttonTakeSelected";
-            this.buttonTakeSelected.Size = new System.Drawing.Size(154, 50);
-            this.buttonTakeSelected.TabIndex = 35;
-            this.buttonTakeSelected.Text = "Take selected book";
-            this.buttonTakeSelected.UseVisualStyleBackColor = true;
             // 
             // FormLibrarySoftware
             // 

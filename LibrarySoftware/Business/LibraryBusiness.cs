@@ -99,7 +99,13 @@ namespace Business
 
         public void CreateRelation(Book book, LibraryCard card)
         {
-
+            BookCardRelations relations = new BookCardRelations();
+            relations.BookId = book.BookId;
+            relations.Book = book;
+            relations.LibraryCardId = card.Id;
+            relations.LibraryCard = card;
+            libraryContext.BookCardRelations.Add(relations);
+            libraryContext.SaveChanges();
         }
     }
 }

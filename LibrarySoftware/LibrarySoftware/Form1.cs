@@ -96,17 +96,14 @@ namespace LibrarySoftware
             {
                 book.DateTaken = dateTimePickerTaken.Value;
                 book.DateReturned = dateTimePickerReturn.Value;
+                int cardId = int.Parse(comboBoxTakenByWho.Text.Split(',').ToArray()[0]);
+                this.business.CreateRelation(book, business.GetAllCards().Where(x => x.Id == cardId).First());
             }
             else
             {
                 book.DateTaken = null;
                 book.DateReturned = null;
             }
-            /*int index = comboBoxTakenByWho.SelectedIndex;
-            BookCardRelations relations = new BookCardRelations();
-            relations.Book = book;
-            relations.LibraryCard = business.GetAllCards()[index];
-            book.BookCardRelations.Add(relations);*/
             
 
             business.AddBook(book);

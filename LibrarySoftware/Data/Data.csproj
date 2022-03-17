@@ -68,6 +68,10 @@
     <Compile Include="Migrations\202203161338320_NullableDates.designer.cs">
       <DependentUpon>202203161338320_NullableDates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202203171456470_RelationsUpdate.cs" />
+    <Compile Include="Migrations\202203171456470_RelationsUpdate.designer.cs">
+      <DependentUpon>202203171456470_RelationsUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Book.cs" />
     <Compile Include="Model\BookCardRelations.cs" />
@@ -90,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203161338320_NullableDates.resx">
       <DependentUpon>202203161338320_NullableDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203171456470_RelationsUpdate.resx">
+      <DependentUpon>202203171456470_RelationsUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
