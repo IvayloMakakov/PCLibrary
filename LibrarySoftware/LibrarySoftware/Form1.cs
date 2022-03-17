@@ -27,6 +27,10 @@ namespace LibrarySoftware
                 comboBoxTakenByWho.Items.Add(card.Id + ", " + card.FullName);
             }
             this.SetDates();
+            foreach (LibraryCard card in business.GetAllCards())
+            {
+                business.DeleteExpiredCard(card);
+            }
         }
 
         private void comboBoxSelection_SelectedIndexChanged(object sender, EventArgs e)
@@ -137,15 +141,25 @@ namespace LibrarySoftware
 
         private void buttonDeleteBook_Click(object sender, EventArgs e)
         {
-            List<int> deletedIndexes = new List<int>();
-            for (int i = 0; i < dataGridViewBooks.SelectedRows.Count; i++)
-            {
-                deletedIndexes.Add(dataGridViewBooks.SelectedCells[i].RowIndex);
-            }
-            foreach (var item in deletedIndexes)
-            {
+            DataGridViewCellCollection row = dataGridViewBooks.SelectedRows[0].Cells;
+            int id = (int)row[0].Value;
+            business.DeleteBook(id);
+            UpdateGrid();
+            dataGridViewBooks.ClearSelection();
+        }
 
-            }
+        private void dataGridViewBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void buttonDeleteCard_Click(object sender, EventArgs e)
+        {            
+            DataGridViewCellCollection row = dataGridViewCards.SelectedRows[0].Cells;
+            int id = (int)row[0].Value;
+            business.DeleteCard(id);
+            UpdateGrid();
+            dataGridViewBooks.ClearSelection();
         }
     }
 }

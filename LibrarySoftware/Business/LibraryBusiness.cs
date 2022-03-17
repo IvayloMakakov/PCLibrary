@@ -89,6 +89,14 @@ namespace Business
             }
         }
 
+        public void DeleteExpiredCard(LibraryCard card)
+        {
+            if (card.ExpirationDate < DateTime.Today)
+            {
+                this.DeleteCard(card.Id);
+            }
+        }
+
         public void CreateRelation(Book book, LibraryCard card)
         {
 

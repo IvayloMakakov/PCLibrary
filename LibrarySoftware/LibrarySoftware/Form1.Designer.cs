@@ -66,6 +66,9 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.dataGridViewCards = new System.Windows.Forms.DataGridView();
             this.comboBoxSearchFor = new System.Windows.Forms.ComboBox();
+            this.comboBoxId = new System.Windows.Forms.ComboBox();
+            this.buttonTakeById = new System.Windows.Forms.Button();
+            this.buttonTakeSelected = new System.Windows.Forms.Button();
             this.groupBoxBook.SuspendLayout();
             this.groupBoxCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).BeginInit();
@@ -271,6 +274,9 @@
             // 
             // groupBoxCard
             // 
+            this.groupBoxCard.Controls.Add(this.buttonTakeSelected);
+            this.groupBoxCard.Controls.Add(this.buttonTakeById);
+            this.groupBoxCard.Controls.Add(this.comboBoxId);
             this.groupBoxCard.Controls.Add(this.buttonEditCard);
             this.groupBoxCard.Controls.Add(this.buttonDeleteCard);
             this.groupBoxCard.Controls.Add(this.buttonAddNewCard);
@@ -284,7 +290,7 @@
             this.groupBoxCard.Controls.Add(this.labelEGN);
             this.groupBoxCard.Controls.Add(this.textBoxFullName);
             this.groupBoxCard.Controls.Add(this.labelFullName);
-            this.groupBoxCard.Location = new System.Drawing.Point(829, 0);
+            this.groupBoxCard.Location = new System.Drawing.Point(362, 0);
             this.groupBoxCard.Name = "groupBoxCard";
             this.groupBoxCard.Size = new System.Drawing.Size(339, 374);
             this.groupBoxCard.TabIndex = 3;
@@ -296,7 +302,7 @@
             this.buttonEditCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEditCard.Location = new System.Drawing.Point(19, 276);
             this.buttonEditCard.Name = "buttonEditCard";
-            this.buttonEditCard.Size = new System.Drawing.Size(303, 31);
+            this.buttonEditCard.Size = new System.Drawing.Size(154, 31);
             this.buttonEditCard.TabIndex = 32;
             this.buttonEditCard.Text = "Edit selected card";
             this.buttonEditCard.UseVisualStyleBackColor = true;
@@ -306,17 +312,18 @@
             this.buttonDeleteCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDeleteCard.Location = new System.Drawing.Point(19, 313);
             this.buttonDeleteCard.Name = "buttonDeleteCard";
-            this.buttonDeleteCard.Size = new System.Drawing.Size(303, 50);
+            this.buttonDeleteCard.Size = new System.Drawing.Size(154, 50);
             this.buttonDeleteCard.TabIndex = 31;
             this.buttonDeleteCard.Text = "Delete selected card";
             this.buttonDeleteCard.UseVisualStyleBackColor = true;
+            this.buttonDeleteCard.Click += new System.EventHandler(this.buttonDeleteCard_Click);
             // 
             // buttonAddNewCard
             // 
             this.buttonAddNewCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAddNewCard.Location = new System.Drawing.Point(19, 239);
             this.buttonAddNewCard.Name = "buttonAddNewCard";
-            this.buttonAddNewCard.Size = new System.Drawing.Size(303, 31);
+            this.buttonAddNewCard.Size = new System.Drawing.Size(154, 31);
             this.buttonAddNewCard.TabIndex = 30;
             this.buttonAddNewCard.Text = "Add new card";
             this.buttonAddNewCard.UseVisualStyleBackColor = true;
@@ -419,6 +426,7 @@
             this.dataGridViewBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewBooks.Size = new System.Drawing.Size(408, 161);
             this.dataGridViewBooks.TabIndex = 4;
+            this.dataGridViewBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBooks_CellContentClick);
             // 
             // pictureBoxMagnifyingGlass
             // 
@@ -467,6 +475,34 @@
             this.comboBoxSearchFor.Name = "comboBoxSearchFor";
             this.comboBoxSearchFor.Size = new System.Drawing.Size(18, 21);
             this.comboBoxSearchFor.TabIndex = 10;
+            // 
+            // comboBoxId
+            // 
+            this.comboBoxId.FormattingEnabled = true;
+            this.comboBoxId.Location = new System.Drawing.Point(187, 245);
+            this.comboBoxId.Name = "comboBoxId";
+            this.comboBoxId.Size = new System.Drawing.Size(135, 21);
+            this.comboBoxId.TabIndex = 33;
+            // 
+            // buttonTakeById
+            // 
+            this.buttonTakeById.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonTakeById.Location = new System.Drawing.Point(179, 276);
+            this.buttonTakeById.Name = "buttonTakeById";
+            this.buttonTakeById.Size = new System.Drawing.Size(154, 31);
+            this.buttonTakeById.TabIndex = 34;
+            this.buttonTakeById.Text = "Take book by ID";
+            this.buttonTakeById.UseVisualStyleBackColor = true;
+            // 
+            // buttonTakeSelected
+            // 
+            this.buttonTakeSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonTakeSelected.Location = new System.Drawing.Point(179, 313);
+            this.buttonTakeSelected.Name = "buttonTakeSelected";
+            this.buttonTakeSelected.Size = new System.Drawing.Size(154, 50);
+            this.buttonTakeSelected.TabIndex = 35;
+            this.buttonTakeSelected.Text = "Take selected book";
+            this.buttonTakeSelected.UseVisualStyleBackColor = true;
             // 
             // FormLibrarySoftware
             // 
@@ -538,6 +574,9 @@
         private System.Windows.Forms.ComboBox comboBoxTakenByWho;
         private System.Windows.Forms.Label labelTakenBy;
         private System.Windows.Forms.ComboBox comboBoxSearchFor;
+        private System.Windows.Forms.Button buttonTakeSelected;
+        private System.Windows.Forms.Button buttonTakeById;
+        private System.Windows.Forms.ComboBox comboBoxId;
     }
 }
 
