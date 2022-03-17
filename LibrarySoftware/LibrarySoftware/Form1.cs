@@ -137,8 +137,15 @@ namespace LibrarySoftware
 
         private void buttonDeleteBook_Click(object sender, EventArgs e)
         {
-            List<Book> deletedBooks = new List<Book>();
-            MessageBox.Show(dataGridViewBooks.SelectedRows[2].ToString());
+            List<int> deletedIndexes = new List<int>();
+            for (int i = 0; i < dataGridViewBooks.SelectedRows.Count; i++)
+            {
+                deletedIndexes.Add(dataGridViewBooks.SelectedCells[i].RowIndex);
+            }
+            foreach (var item in deletedIndexes)
+            {
+
+            }
         }
     }
 }

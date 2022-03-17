@@ -51,3 +51,24 @@ E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\
 E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.CopyComplete
 E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.exe
 E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.pdb
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\LibrarySoftware.exe.config
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\LibrarySoftware.exe
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\LibrarySoftware.pdb
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Business.dll
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Data.dll
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.dll
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Business.pdb
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Business.dll.config
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Data.pdb
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Data.dll.config
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.xml
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.AssemblyReference.cache
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.FormLibrarySoftware.resources
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.Properties.Resources.resources
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.GenerateResource.cache
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.CopyComplete
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.exe
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.pdb

@@ -32,3 +32,20 @@ E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj
 E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.CopyComplete
 E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.dll
 E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.pdb
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.dll.config
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.dll
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.pdb
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.dll
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.xml
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.AssemblyReference.cache
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.Initial.resources
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableBooks.resources
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableCards.resources
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.NullableDates.resources
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.GenerateResource.cache
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.CopyComplete
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.dll
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.pdb

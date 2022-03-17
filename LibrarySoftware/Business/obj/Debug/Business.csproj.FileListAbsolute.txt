@@ -28,3 +28,18 @@ E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Business\obj\Debug\Busines
 E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.csproj.CopyComplete
 E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.dll
 E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.pdb
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\bin\Debug\Business.dll.config
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\bin\Debug\Business.dll
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\bin\Debug\Business.pdb
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\bin\Debug\Data.dll
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\bin\Debug\EntityFramework.dll
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\bin\Debug\Data.pdb
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\bin\Debug\Data.dll.config
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\bin\Debug\EntityFramework.xml
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.csproj.AssemblyReference.cache
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.csproj.CopyComplete
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.dll
+C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.pdb
