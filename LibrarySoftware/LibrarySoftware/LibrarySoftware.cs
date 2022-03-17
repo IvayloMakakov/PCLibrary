@@ -14,22 +14,26 @@ namespace LibrarySoftware
 {
     public partial class FormLibrarySoftware : Form
     {
-        public LibraryBusiness business;
+        public BookBusiness bookBusiness;
+        public LibraryCardBusiness cardBusiness;
+        public BookCardRelationsBusiness relationsBusiness;
 
         public FormLibrarySoftware()
         {
             InitializeComponent();
             comboBoxSelection.SelectedIndex = 0;
-            this.business = new LibraryBusiness();
+            this.bookBusiness = new BookBusiness();
+            this.cardBusiness = new LibraryCardBusiness();
+            this.relationsBusiness = new BookCardRelationsBusiness();
             this.UpdateGrid();
-            foreach (var card in this.business.GetAllCards())
+            foreach (var card in this.cardBusiness.GetAllCards())
             {
                 comboBoxTakenByWho.Items.Add(card.Id + ", " + card.FullName);
             }
             this.SetDates();
-            foreach (LibraryCard card in business.GetAllCards())
+            foreach (LibraryCard card in cardBusiness.GetAllCards())
             {
-                business.DeleteExpiredCard(card);
+                cardBusiness.DeleteExpiredCard(card);
             }
         }
 
@@ -99,16 +103,26 @@ namespace LibrarySoftware
                     book.DateTaken = dateTimePickerTaken.Value;
                     book.DateReturned = dateTimePickerReturn.Value;
                     int cardId = int.Parse(comboBoxTakenByWho.Text.Split(',').ToArray()[0]);
-                    this.business.CreateRelation(book, business.GetAllCards().Where(x => x.Id == cardId).First());
+                    LibraryCard libraryCard = cardBusiness.GetAllCards().Where(x => x.Id == cardId).First();
+
+                    BookCardRelations bookCardRelation = new BookCardRelations();
+
+                    bookBusiness.AddBook(book);
+
+                    bookCardRelation.LibraryCardId = libraryCard.Id;
+                    bookCardRelation.BookId = book.BookId;
+
+                    this.relationsBusiness.CreateRelation(bookCardRelation);
                 }
                 else
                 {
                     book.DateTaken = null;
                     book.DateReturned = null;
+                    bookBusiness.AddBook(book);
                 }
 
 
-                business.AddBook(book);
+
                 UpdateGrid();
             }
             catch (Exception ex)
@@ -122,8 +136,8 @@ namespace LibrarySoftware
         {
             try
             {
-                this.dataGridViewBooks.DataSource = this.business.GetAllBooks();
-                this.dataGridViewCards.DataSource = this.business.GetAllCards();
+                this.dataGridViewBooks.DataSource = this.bookBusiness.GetAllBooks();
+                this.dataGridViewCards.DataSource = this.cardBusiness.GetAllCards();
             }
             catch (Exception ex)
             {
@@ -143,7 +157,7 @@ namespace LibrarySoftware
                 card.DateCreated = dateTimePickerDateCreated.Value;
                 card.ExpirationDate = dateTimePickerExpirationDate.Value;
 
-                this.business.AddCard(card);
+                this.cardBusiness.AddCard(card);
                 UpdateGrid();
                 comboBoxTakenByWho.Items.Add(card.Id + ", " + card.FullName);
             }
@@ -165,7 +179,7 @@ namespace LibrarySoftware
             {
                 DataGridViewCellCollection row = dataGridViewBooks.SelectedRows[0].Cells;
                 int id = (int)row[0].Value;
-                business.DeleteBook(id);
+                bookBusiness.DeleteBook(id);
                 UpdateGrid();
                 dataGridViewBooks.ClearSelection();
             }
@@ -187,7 +201,7 @@ namespace LibrarySoftware
             {
                 DataGridViewCellCollection row = dataGridViewCards.SelectedRows[0].Cells;
                 int id = (int)row[0].Value;
-                business.DeleteCard(id);
+                cardBusiness.DeleteCard(id);
                 UpdateGrid();
                 dataGridViewBooks.ClearSelection();
             }
@@ -220,7 +234,7 @@ namespace LibrarySoftware
 
         private void UpdateTextBoxesBooks( int id)
         {
-            Book book = this.business.GetBookWithId(id);
+            Book book = this.bookBusiness.GetBookWithId(id);
             textBoxTitle.Text = book.Title;
             textBoxAuthor.Text= book.Author;
             textBoxCategory.Text= book.Category;
@@ -247,7 +261,7 @@ namespace LibrarySoftware
 
         private void UpdateTextBoxesCards(int id)
         {
-            LibraryCard card = this.business.GetCardWithId(id);
+            LibraryCard card = this.cardBusiness.GetCardWithId(id);
             textBoxFullName.Text = card.FullName;
             textBoxEgn.Text = card.EGN;
             textBoxEmail.Text= card.Email;
@@ -269,7 +283,7 @@ namespace LibrarySoftware
                 book.DateTaken = dateTimePickerTaken.Value;
                 book.DateReturned = dateTimePickerReturn.Value;
                 int cardId = int.Parse(comboBoxTakenByWho.Text.Split(',').ToArray()[0]);
-                this.business.CreateRelation(book, business.GetAllCards().Where(x => x.Id == cardId).First());
+                //this.relationsBusiness.CreateRelation(book, cardBusiness.GetAllCards().Where(x => x.Id == cardId).First());
             }
             else
             {
@@ -278,7 +292,7 @@ namespace LibrarySoftware
             }
 
             
-            business.UpdateBook(book);
+            bookBusiness.UpdateBook(book);
             UpdateGrid();
             dataGridViewBooks.Enabled = true;
             buttonEditBook.Visible = true;

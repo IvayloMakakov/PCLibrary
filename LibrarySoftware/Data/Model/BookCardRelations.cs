@@ -13,10 +13,10 @@ namespace Data.Model
 
         [Required]
         public int BookId { get; set; }
-        public Book Book { get; set; }
+        public virtual Book Book { get; set; }
 
         [Required]
         public int LibraryCardId { get; set; }
-        public LibraryCard LibraryCard { get; set; }
+        public virtual LibraryCard LibraryCard { get; set; }
     }
 }

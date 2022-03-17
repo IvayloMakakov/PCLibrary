@@ -9,6 +9,11 @@ namespace Data.Model
 {
     public class LibraryCard
     {
+        public LibraryCard()
+        {
+            this.BookCardRelations = new HashSet<BookCardRelations>();
+        }
+
         public int Id { get; set; }
 
         [Required]

@@ -50,3 +50,4 @@ C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.c
 C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.dll
 C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.pdb
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.RelationsUpdate.resources
+C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.HashSets.resources

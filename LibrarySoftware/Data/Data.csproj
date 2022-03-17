@@ -72,6 +72,10 @@
     <Compile Include="Migrations\202203171456470_RelationsUpdate.designer.cs">
       <DependentUpon>202203171456470_RelationsUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202203171956052_HashSets.cs" />
+    <Compile Include="Migrations\202203171956052_HashSets.designer.cs">
+      <DependentUpon>202203171956052_HashSets.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Book.cs" />
     <Compile Include="Model\BookCardRelations.cs" />
@@ -97,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203171456470_RelationsUpdate.resx">
       <DependentUpon>202203171456470_RelationsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203171956052_HashSets.resx">
+      <DependentUpon>202203171956052_HashSets.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

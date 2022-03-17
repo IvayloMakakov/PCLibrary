@@ -52,7 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LibraryBusiness.cs" />
+    <Compile Include="BookBusiness.cs" />
+    <Compile Include="BookCardRelationsBusiness.cs" />
+    <Compile Include="LibraryCardBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
