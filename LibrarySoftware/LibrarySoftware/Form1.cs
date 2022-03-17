@@ -147,5 +147,10 @@ namespace LibrarySoftware
 
             }
         }
+
+        private void FormLibrarySoftware_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

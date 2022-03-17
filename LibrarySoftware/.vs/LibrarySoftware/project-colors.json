@@ -10,7 +10,12 @@
       "ProjectGuid": "2b82ce21-210e-44cd-8302-9fe700c04bfe",
       "DisplayName": "Business",
       "ColorIndex": 1
+    },
+    "ce826480-3379-443d-a58c-9aebb2f1937d": {
+      "ProjectGuid": "ce826480-3379-443d-a58c-9aebb2f1937d",
+      "DisplayName": "Data",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }

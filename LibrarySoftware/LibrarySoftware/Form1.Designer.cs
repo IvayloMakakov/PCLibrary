@@ -80,7 +80,7 @@
             this.comboBoxSelection.Items.AddRange(new object[] {
             "Books",
             "Cards"});
-            this.comboBoxSelection.Location = new System.Drawing.Point(373, 12);
+            this.comboBoxSelection.Location = new System.Drawing.Point(395, 12);
             this.comboBoxSelection.Name = "comboBoxSelection";
             this.comboBoxSelection.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSelection.TabIndex = 1;
@@ -487,6 +487,7 @@
             this.Name = "FormLibrarySoftware";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library Software";
+            this.Load += new System.EventHandler(this.FormLibrarySoftware_Load);
             this.groupBoxBook.ResumeLayout(false);
             this.groupBoxBook.PerformLayout();
             this.groupBoxCard.ResumeLayout(false);
