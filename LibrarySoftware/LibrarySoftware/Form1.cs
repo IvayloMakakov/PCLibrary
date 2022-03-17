@@ -158,5 +158,10 @@ namespace LibrarySoftware
             UpdateGrid();
             dataGridViewBooks.ClearSelection();
         }
+
+        private void FormLibrarySoftware_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
