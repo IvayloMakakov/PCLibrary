@@ -185,7 +185,6 @@ namespace LibrarySoftware
         {
             try
             {
-
                 DataGridViewCellCollection row = dataGridViewCards.SelectedRows[0].Cells;
                 int id = (int)row[0].Value;
                 business.DeleteCard(id);
@@ -209,18 +208,15 @@ namespace LibrarySoftware
             {
                 var item = dataGridViewBooks.SelectedRows[0].Cells;
                 int id = (int)item[0].Value;
-                //editId = id;
                 UpdateTextBoxesBooks(id);
-                //ToggleSaveUpdate();
-                DisabeSelectBooks();
+                buttonEditBook.Visible = false;
+                buttonSaveBook.Visible = true;
+                dataGridViewBooks.Enabled = false;
+                UpdateGrid();
             }
 
         }
 
-        private void DisabeSelectBooks()
-        {
-            dataGridViewBooks.Enabled = false;
-        }
 
         private void UpdateTextBoxesBooks( int id)
         {
@@ -228,8 +224,15 @@ namespace LibrarySoftware
             textBoxTitle.Text = book.Title;
             textBoxAuthor.Text= book.Author;
             textBoxCategory.Text= book.Category;
-            dateTimePickerTaken.Value = book.DateTaken.Value;
-            dateTimePickerReturn.Value = book.DateReturned.Value;
+            if (checkBoxTaken.Checked)
+            {
+                dateTimePickerTaken.Value = book.DateTaken.Value;
+            }
+            else
+            {
+                dateTimePickerTaken.Value = DateTime.Today;                
+            }
+            SetDates();
         }
 
         private void buttonEditCard_Click(object sender, EventArgs e)
@@ -238,16 +241,8 @@ namespace LibrarySoftware
             {
                 var item = dataGridViewCards.SelectedRows[0].Cells;
                 int id = (int)item[0].Value;
-                //editId = id;
                 UpdateTextBoxesCards(id);
-                //ToggleSaveUpdate();
-                DisabeSelectCards();
             }
-        }
-
-        private void DisabeSelectCards()
-        {
-            dataGridViewCards.Enabled = false;
         }
 
         private void UpdateTextBoxesCards(int id)
@@ -258,6 +253,36 @@ namespace LibrarySoftware
             textBoxEmail.Text= card.Email;
             dateTimePickerDateCreated.Value=card.DateCreated;
             dateTimePickerExpirationDate.Value=card.ExpirationDate;
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            var item = dataGridViewCards.SelectedRows[0].Cells;
+            int id = (int)item[0].Value;
+            Book book = new Book();
+            book.BookId = id;
+            book.Title = textBoxTitle.Text;
+            book.Author = textBoxAuthor.Text;
+            book.Category = textBoxCategory.Text;
+            if (checkBoxTaken.Checked)
+            {
+                book.DateTaken = dateTimePickerTaken.Value;
+                book.DateReturned = dateTimePickerReturn.Value;
+                int cardId = int.Parse(comboBoxTakenByWho.Text.Split(',').ToArray()[0]);
+                this.business.CreateRelation(book, business.GetAllCards().Where(x => x.Id == cardId).First());
+            }
+            else
+            {
+                book.DateTaken = null;
+                book.DateReturned = null;
+            }
+
+            
+            business.UpdateBook(book);
+            UpdateGrid();
+            dataGridViewBooks.Enabled = true;
+            buttonEditBook.Visible = true;
+            buttonSaveBook.Visible = false;
         }
     }
 }

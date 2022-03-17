@@ -69,6 +69,7 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.dataGridViewCards = new System.Windows.Forms.DataGridView();
             this.comboBoxSearchFor = new System.Windows.Forms.ComboBox();
+            this.buttonSaveBook = new System.Windows.Forms.Button();
             this.groupBoxBook.SuspendLayout();
             this.groupBoxCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).BeginInit();
@@ -108,6 +109,7 @@
             this.groupBoxBook.Controls.Add(this.labelAuthor);
             this.groupBoxBook.Controls.Add(this.textBoxTitle);
             this.groupBoxBook.Controls.Add(this.labelTitle);
+            this.groupBoxBook.Controls.Add(this.buttonSaveBook);
             this.groupBoxBook.Location = new System.Drawing.Point(2, 0);
             this.groupBoxBook.Name = "groupBoxBook";
             this.groupBoxBook.Size = new System.Drawing.Size(354, 374);
@@ -506,6 +508,18 @@
             this.comboBoxSearchFor.Size = new System.Drawing.Size(18, 21);
             this.comboBoxSearchFor.TabIndex = 10;
             // 
+            // buttonSaveBook
+            // 
+            this.buttonSaveBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSaveBook.Location = new System.Drawing.Point(21, 296);
+            this.buttonSaveBook.Name = "buttonSaveBook";
+            this.buttonSaveBook.Size = new System.Drawing.Size(303, 31);
+            this.buttonSaveBook.TabIndex = 21;
+            this.buttonSaveBook.Text = "Save";
+            this.buttonSaveBook.UseVisualStyleBackColor = true;
+            this.buttonSaveBook.Visible = false;
+            this.buttonSaveBook.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // FormLibrarySoftware
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -580,6 +594,7 @@
         private System.Windows.Forms.Button buttonTakeSelected;
         private System.Windows.Forms.Button buttonTakeById;
         private System.Windows.Forms.ComboBox comboBoxId;
+        private System.Windows.Forms.Button buttonSaveBook;
     }
 }
 
