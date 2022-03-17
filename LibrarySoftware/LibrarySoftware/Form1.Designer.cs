@@ -65,6 +65,7 @@
             this.pictureBoxMagnifyingGlass = new System.Windows.Forms.PictureBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.dataGridViewCards = new System.Windows.Forms.DataGridView();
+            this.comboBoxSearchFor = new System.Windows.Forms.ComboBox();
             this.groupBoxBook.SuspendLayout();
             this.groupBoxCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).BeginInit();
@@ -150,6 +151,7 @@
             this.buttonDeleteBook.TabIndex = 16;
             this.buttonDeleteBook.Text = "Delete selected book";
             this.buttonDeleteBook.UseVisualStyleBackColor = true;
+            this.buttonDeleteBook.Click += new System.EventHandler(this.buttonDeleteBook_Click);
             // 
             // buttonAddBook
             // 
@@ -282,7 +284,7 @@
             this.groupBoxCard.Controls.Add(this.labelEGN);
             this.groupBoxCard.Controls.Add(this.textBoxFullName);
             this.groupBoxCard.Controls.Add(this.labelFullName);
-            this.groupBoxCard.Location = new System.Drawing.Point(362, 0);
+            this.groupBoxCard.Location = new System.Drawing.Point(829, 0);
             this.groupBoxCard.Name = "groupBoxCard";
             this.groupBoxCard.Size = new System.Drawing.Size(339, 374);
             this.groupBoxCard.TabIndex = 3;
@@ -406,7 +408,10 @@
             // 
             this.dataGridViewBooks.AllowUserToAddRows = false;
             this.dataGridViewBooks.AllowUserToDeleteRows = false;
-            this.dataGridViewBooks.AllowUserToOrderColumns = true;
+            this.dataGridViewBooks.AllowUserToResizeColumns = false;
+            this.dataGridViewBooks.AllowUserToResizeRows = false;
+            this.dataGridViewBooks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewBooks.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBooks.Location = new System.Drawing.Point(373, 46);
             this.dataGridViewBooks.Name = "dataGridViewBooks";
@@ -425,6 +430,7 @@
             this.pictureBoxMagnifyingGlass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMagnifyingGlass.TabIndex = 8;
             this.pictureBoxMagnifyingGlass.TabStop = false;
+            this.pictureBoxMagnifyingGlass.Click += new System.EventHandler(this.pictureBoxMagnifyingGlass_Click);
             // 
             // textBoxSearch
             // 
@@ -437,7 +443,10 @@
             // 
             this.dataGridViewCards.AllowUserToAddRows = false;
             this.dataGridViewCards.AllowUserToDeleteRows = false;
-            this.dataGridViewCards.AllowUserToOrderColumns = true;
+            this.dataGridViewCards.AllowUserToResizeColumns = false;
+            this.dataGridViewCards.AllowUserToResizeRows = false;
+            this.dataGridViewCards.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewCards.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewCards.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCards.Location = new System.Drawing.Point(373, 206);
             this.dataGridViewCards.Name = "dataGridViewCards";
@@ -446,11 +455,25 @@
             this.dataGridViewCards.Size = new System.Drawing.Size(408, 168);
             this.dataGridViewCards.TabIndex = 9;
             // 
+            // comboBoxSearchFor
+            // 
+            this.comboBoxSearchFor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSearchFor.DropDownWidth = 80;
+            this.comboBoxSearchFor.FormattingEnabled = true;
+            this.comboBoxSearchFor.Items.AddRange(new object[] {
+            "Search books",
+            "Search cards"});
+            this.comboBoxSearchFor.Location = new System.Drawing.Point(763, 12);
+            this.comboBoxSearchFor.Name = "comboBoxSearchFor";
+            this.comboBoxSearchFor.Size = new System.Drawing.Size(18, 21);
+            this.comboBoxSearchFor.TabIndex = 10;
+            // 
             // FormLibrarySoftware
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 377);
+            this.Controls.Add(this.comboBoxSearchFor);
             this.Controls.Add(this.groupBoxCard);
             this.Controls.Add(this.dataGridViewCards);
             this.Controls.Add(this.pictureBoxMagnifyingGlass);
@@ -514,6 +537,7 @@
         private System.Windows.Forms.DataGridView dataGridViewCards;
         private System.Windows.Forms.ComboBox comboBoxTakenByWho;
         private System.Windows.Forms.Label labelTakenBy;
+        private System.Windows.Forms.ComboBox comboBoxSearchFor;
     }
 }
 

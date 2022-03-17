@@ -88,5 +88,10 @@ namespace Business
                 libraryContext.SaveChanges();
             }
         }
+
+        public void CreateRelation(Book book, LibraryCard card)
+        {
+
+        }
     }
 }

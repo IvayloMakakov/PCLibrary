@@ -30,3 +30,24 @@ C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Library
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Data.dll
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Data.pdb
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Data.dll.config
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\LibrarySoftware.exe.config
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\LibrarySoftware.exe
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\LibrarySoftware.pdb
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Business.dll
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Data.dll
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.dll
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Business.pdb
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Business.dll.config
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Data.pdb
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Data.dll.config
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.xml
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.AssemblyReference.cache
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.FormLibrarySoftware.resources
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.Properties.Resources.resources
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.GenerateResource.cache
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.CoreCompileInputs.cache
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.CopyComplete
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.exe
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.pdb

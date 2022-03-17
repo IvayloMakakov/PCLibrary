@@ -21,12 +21,12 @@ namespace LibrarySoftware
             InitializeComponent();
             comboBoxSelection.SelectedIndex = 0;
             this.business = new LibraryBusiness();
-            UpdateGrid();
-            foreach (var card in business.GetAllCards())
+            this.UpdateGrid();
+            foreach (var card in this.business.GetAllCards())
             {
                 comboBoxTakenByWho.Items.Add(card.Id + ", " + card.FullName);
             }
-            SetDates();
+            this.SetDates();
         }
 
         private void comboBoxSelection_SelectedIndexChanged(object sender, EventArgs e)
@@ -128,6 +128,17 @@ namespace LibrarySoftware
             this.business.AddCard(card);
             UpdateGrid();
             comboBoxTakenByWho.Items.Add(card.Id + ", " + card.FullName);
+        }
+
+        private void pictureBoxMagnifyingGlass_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDeleteBook_Click(object sender, EventArgs e)
+        {
+            List<Book> deletedBooks = new List<Book>();
+            MessageBox.Show(dataGridViewBooks.SelectedRows[2].ToString());
         }
     }
 }

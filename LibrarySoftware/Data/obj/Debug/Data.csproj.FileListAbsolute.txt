@@ -15,3 +15,20 @@ C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Data\ob
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableBooks.resources
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableCards.resources
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.NullableDates.resources
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.dll.config
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.dll
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.pdb
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.dll
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.xml
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.AssemblyReference.cache
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.Initial.resources
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableBooks.resources
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableCards.resources
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.NullableDates.resources
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.GenerateResource.cache
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.CopyComplete
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.dll
+E:\Ivailo 11a\ActualLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.pdb
