@@ -24,6 +24,28 @@ namespace Business
         {
             return libraryContext.Books.Find(id);
         }
+
+        public List<Book> SearchBooks(string searchedText)
+        {
+            List<Book> foundBooks = new List<Book>();
+            foreach (Book book in this.GetAllBooks())
+            {
+                if (book.Title.ToLower().Contains(searchedText.ToLower()))
+                {
+                    foundBooks.Add(book);
+                }
+                else if (book.Author.ToLower().Contains(searchedText.ToLower()))
+                {
+                    foundBooks.Add(book);
+                }
+                else if (book.Category.ToLower().Contains(searchedText.ToLower()))
+                {
+                    foundBooks.Add(book);
+                }
+            }
+            return foundBooks;
+        }
+
         public void AddBook(Book book)
         {
             libraryContext.Books.Add(book);

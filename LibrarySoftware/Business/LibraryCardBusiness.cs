@@ -28,6 +28,26 @@ namespace Business
             return libraryContext.LibraryCards.Find(id);
         }
 
+        public List<LibraryCard> SearchCards(string searchedText)
+        {
+            List<LibraryCard> foundCards = new List<LibraryCard>();
+            foreach (LibraryCard card in this.GetAllCards())
+            {
+                if (card.FullName.ToLower().Contains(searchedText.ToLower()))
+                {
+                    foundCards.Add(card);
+                }
+                else if (card.EGN.ToLower().Contains(searchedText.ToLower()))
+                {
+                    foundCards.Add(card);
+                }
+                else if (card.Email.ToLower().Contains(searchedText.ToLower()))
+                {
+                    foundCards.Add(card);
+                }
+            }
+            return foundCards;
+        }
 
         public void AddCard(LibraryCard card)
         {

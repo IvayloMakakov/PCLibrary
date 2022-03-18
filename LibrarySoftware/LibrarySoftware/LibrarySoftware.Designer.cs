@@ -47,6 +47,7 @@
             this.labelAuthor = new System.Windows.Forms.Label();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.labelTitle = new System.Windows.Forms.Label();
+            this.buttonSaveBook = new System.Windows.Forms.Button();
             this.groupBoxCard = new System.Windows.Forms.GroupBox();
             this.buttonTakeSelected = new System.Windows.Forms.Button();
             this.buttonTakeById = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.dataGridViewCards = new System.Windows.Forms.DataGridView();
             this.comboBoxSearchFor = new System.Windows.Forms.ComboBox();
-            this.buttonSaveBook = new System.Windows.Forms.Button();
             this.groupBoxBook.SuspendLayout();
             this.groupBoxCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).BeginInit();
@@ -275,6 +275,18 @@
             this.labelTitle.TabIndex = 4;
             this.labelTitle.Text = "Title:";
             // 
+            // buttonSaveBook
+            // 
+            this.buttonSaveBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSaveBook.Location = new System.Drawing.Point(21, 296);
+            this.buttonSaveBook.Name = "buttonSaveBook";
+            this.buttonSaveBook.Size = new System.Drawing.Size(303, 31);
+            this.buttonSaveBook.TabIndex = 21;
+            this.buttonSaveBook.Text = "Save";
+            this.buttonSaveBook.UseVisualStyleBackColor = true;
+            this.buttonSaveBook.Visible = false;
+            this.buttonSaveBook.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // groupBoxCard
             // 
             this.groupBoxCard.Controls.Add(this.buttonTakeSelected);
@@ -458,13 +470,12 @@
             this.dataGridViewBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewBooks.Size = new System.Drawing.Size(408, 161);
             this.dataGridViewBooks.TabIndex = 4;
-            this.dataGridViewBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBooks_CellContentClick);
             // 
             // pictureBoxMagnifyingGlass
             // 
             this.pictureBoxMagnifyingGlass.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBoxMagnifyingGlass.Image = global::LibrarySoftware.Properties.Resources.searchTransparent;
-            this.pictureBoxMagnifyingGlass.Location = new System.Drawing.Point(554, 12);
+            this.pictureBoxMagnifyingGlass.Location = new System.Drawing.Point(571, 12);
             this.pictureBoxMagnifyingGlass.Name = "pictureBoxMagnifyingGlass";
             this.pictureBoxMagnifyingGlass.Size = new System.Drawing.Size(19, 20);
             this.pictureBoxMagnifyingGlass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -474,10 +485,11 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(579, 12);
+            this.textBoxSearch.Location = new System.Drawing.Point(596, 12);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(202, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(168, 20);
             this.textBoxSearch.TabIndex = 7;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // dataGridViewCards
             // 
@@ -503,22 +515,10 @@
             this.comboBoxSearchFor.Items.AddRange(new object[] {
             "Search books",
             "Search cards"});
-            this.comboBoxSearchFor.Location = new System.Drawing.Point(763, 12);
+            this.comboBoxSearchFor.Location = new System.Drawing.Point(764, 12);
             this.comboBoxSearchFor.Name = "comboBoxSearchFor";
             this.comboBoxSearchFor.Size = new System.Drawing.Size(18, 21);
             this.comboBoxSearchFor.TabIndex = 10;
-            // 
-            // buttonSaveBook
-            // 
-            this.buttonSaveBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSaveBook.Location = new System.Drawing.Point(21, 296);
-            this.buttonSaveBook.Name = "buttonSaveBook";
-            this.buttonSaveBook.Size = new System.Drawing.Size(303, 31);
-            this.buttonSaveBook.TabIndex = 21;
-            this.buttonSaveBook.Text = "Save";
-            this.buttonSaveBook.UseVisualStyleBackColor = true;
-            this.buttonSaveBook.Visible = false;
-            this.buttonSaveBook.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // FormLibrarySoftware
             // 
@@ -526,13 +526,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 377);
             this.Controls.Add(this.comboBoxSearchFor);
-            this.Controls.Add(this.groupBoxCard);
             this.Controls.Add(this.dataGridViewCards);
             this.Controls.Add(this.pictureBoxMagnifyingGlass);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.dataGridViewBooks);
             this.Controls.Add(this.comboBoxSelection);
             this.Controls.Add(this.groupBoxBook);
+            this.Controls.Add(this.groupBoxCard);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(812, 416);
             this.MinimumSize = new System.Drawing.Size(812, 416);

@@ -25,7 +25,6 @@ namespace LibrarySoftware
             this.bookBusiness = new BookBusiness();
             this.cardBusiness = new LibraryCardBusiness();
             this.relationsBusiness = new BookCardRelationsBusiness();
-            this.UpdateGrid();
             foreach (var card in this.cardBusiness.GetAllCards())
             {
                 comboBoxTakenByWho.Items.Add(card.Id + ", " + card.FullName);
@@ -35,6 +34,11 @@ namespace LibrarySoftware
             {
                 cardBusiness.DeleteExpiredCard(card);
             }
+            comboBoxSearchFor.SelectedIndex = 0;
+
+            this.UpdateGrid();
+            dataGridViewBooks.Columns.RemoveAt(6);
+            dataGridViewCards.Columns.RemoveAt(6);
         }
 
         private void comboBoxSelection_SelectedIndexChanged(object sender, EventArgs e)
@@ -190,11 +194,6 @@ namespace LibrarySoftware
 
         }
 
-        private void dataGridViewBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void buttonDeleteCard_Click(object sender, EventArgs e)
         {
             try
@@ -297,6 +296,29 @@ namespace LibrarySoftware
             dataGridViewBooks.Enabled = true;
             buttonEditBook.Visible = true;
             buttonSaveBook.Visible = false;
+        }
+
+        private void BookSearch(string searchedString)
+        {
+            dataGridViewBooks.DataSource = bookBusiness.SearchBooks(searchedString);
+        }
+
+        private void CardSearch(string searchedString)
+        {
+            dataGridViewCards.DataSource = cardBusiness.SearchCards(searchedString);
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBoxSearchFor.SelectedIndex == 0)
+            {
+                BookSearch(textBoxSearch.Text);
+            }
+            else
+            {
+                CardSearch(textBoxSearch.Text);
+            }
+
         }
     }
 }
