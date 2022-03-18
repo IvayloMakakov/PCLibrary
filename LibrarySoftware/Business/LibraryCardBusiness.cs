@@ -41,10 +41,10 @@ namespace Business
             return libraryContext.LibraryCards.Find(id);
         }
         /// <summary>
-        ///  Search for a specific books by specific input
+        ///  Search for a specific cards by specific input
         /// </summary>
         /// <param name="searchedText"></param>
-        /// <returns></returns>
+        /// <returns>Collection of LibraryCards</returns>
         public List<LibraryCard> SearchCards(string searchedText)
         {
             List<LibraryCard> foundCards = new List<LibraryCard>();
@@ -65,13 +65,19 @@ namespace Business
             }
             return foundCards;
         }
-
+        /// <summary>
+        /// Adds a card to the current context
+        /// </summary>
+        /// <param name="card"></param>
         public void AddCard(LibraryCard card)
         {
             libraryContext.LibraryCards.Add(card);
             libraryContext.SaveChanges();
         }
-
+        /// <summary>
+        /// Updates a card to the current context
+        /// </summary>
+        /// <param name="card"></param>
         public void UpdateCard(LibraryCard card)
         {
             LibraryCard updatedCard = libraryContext.LibraryCards.Find(card.Id);
@@ -81,7 +87,10 @@ namespace Business
                 libraryContext.SaveChanges();
             }
         }
-
+        /// <summary>
+        /// Deletes a card to the current context
+        /// </summary>
+        /// <param name="id"></param>
         public void DeleteCard(int id)
         {
             LibraryCard card = libraryContext.LibraryCards.Find(id);
@@ -91,7 +100,10 @@ namespace Business
                 libraryContext.SaveChanges();
             }
         }
-
+        /// <summary>
+        /// Deletes expired card
+        /// </summary>
+        /// <param name="card"></param>
         public void DeleteExpiredCard(LibraryCard card)
         {
             if (card.ExpirationDate < DateTime.Today)
