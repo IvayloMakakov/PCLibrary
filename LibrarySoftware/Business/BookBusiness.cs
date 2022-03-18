@@ -40,7 +40,7 @@ namespace Business
             return libraryContext.Books.Find(id);
         }
         /// <summary>
-        /// Search for a specific books by their title
+        /// Search for a specific books by specific input
         /// </summary>
         /// <param name="searchedText"></param>
         /// <returns>Collection of Books</returns>
