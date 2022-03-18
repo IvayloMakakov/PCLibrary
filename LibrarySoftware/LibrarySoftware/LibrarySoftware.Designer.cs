@@ -32,7 +32,6 @@
             this.groupBoxBook = new System.Windows.Forms.GroupBox();
             this.comboBoxTakenByWho = new System.Windows.Forms.ComboBox();
             this.labelTakenBy = new System.Windows.Forms.Label();
-            this.buttonEditBook = new System.Windows.Forms.Button();
             this.buttonDeleteBook = new System.Windows.Forms.Button();
             this.buttonAddBook = new System.Windows.Forms.Button();
             this.labelIsTaken = new System.Windows.Forms.Label();
@@ -48,10 +47,9 @@
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.buttonSaveBook = new System.Windows.Forms.Button();
+            this.buttonEditBook = new System.Windows.Forms.Button();
             this.groupBoxCard = new System.Windows.Forms.GroupBox();
             this.buttonTakeSelected = new System.Windows.Forms.Button();
-            this.buttonTakeById = new System.Windows.Forms.Button();
-            this.comboBoxId = new System.Windows.Forms.ComboBox();
             this.buttonEditCard = new System.Windows.Forms.Button();
             this.buttonDeleteCard = new System.Windows.Forms.Button();
             this.buttonAddNewCard = new System.Windows.Forms.Button();
@@ -94,7 +92,6 @@
             // 
             this.groupBoxBook.Controls.Add(this.comboBoxTakenByWho);
             this.groupBoxBook.Controls.Add(this.labelTakenBy);
-            this.groupBoxBook.Controls.Add(this.buttonEditBook);
             this.groupBoxBook.Controls.Add(this.buttonDeleteBook);
             this.groupBoxBook.Controls.Add(this.buttonAddBook);
             this.groupBoxBook.Controls.Add(this.labelIsTaken);
@@ -110,6 +107,7 @@
             this.groupBoxBook.Controls.Add(this.textBoxTitle);
             this.groupBoxBook.Controls.Add(this.labelTitle);
             this.groupBoxBook.Controls.Add(this.buttonSaveBook);
+            this.groupBoxBook.Controls.Add(this.buttonEditBook);
             this.groupBoxBook.Location = new System.Drawing.Point(2, 0);
             this.groupBoxBook.Name = "groupBoxBook";
             this.groupBoxBook.Size = new System.Drawing.Size(354, 374);
@@ -136,17 +134,6 @@
             this.labelTakenBy.TabIndex = 19;
             this.labelTakenBy.Text = "Taken by:";
             this.labelTakenBy.Visible = false;
-            // 
-            // buttonEditBook
-            // 
-            this.buttonEditBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEditBook.Location = new System.Drawing.Point(21, 297);
-            this.buttonEditBook.Name = "buttonEditBook";
-            this.buttonEditBook.Size = new System.Drawing.Size(303, 31);
-            this.buttonEditBook.TabIndex = 17;
-            this.buttonEditBook.Text = "Edit selected book";
-            this.buttonEditBook.UseVisualStyleBackColor = true;
-            this.buttonEditBook.Click += new System.EventHandler(this.buttonEditBook_Click);
             // 
             // buttonDeleteBook
             // 
@@ -285,13 +272,22 @@
             this.buttonSaveBook.Text = "Save";
             this.buttonSaveBook.UseVisualStyleBackColor = true;
             this.buttonSaveBook.Visible = false;
-            this.buttonSaveBook.Click += new System.EventHandler(this.buttonSave_Click);
+            this.buttonSaveBook.Click += new System.EventHandler(this.buttonSaveBook_Click);
+            // 
+            // buttonEditBook
+            // 
+            this.buttonEditBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEditBook.Location = new System.Drawing.Point(21, 297);
+            this.buttonEditBook.Name = "buttonEditBook";
+            this.buttonEditBook.Size = new System.Drawing.Size(303, 31);
+            this.buttonEditBook.TabIndex = 17;
+            this.buttonEditBook.Text = "Edit selected book";
+            this.buttonEditBook.UseVisualStyleBackColor = true;
+            this.buttonEditBook.Click += new System.EventHandler(this.buttonEditBook_Click);
             // 
             // groupBoxCard
             // 
             this.groupBoxCard.Controls.Add(this.buttonTakeSelected);
-            this.groupBoxCard.Controls.Add(this.buttonTakeById);
-            this.groupBoxCard.Controls.Add(this.comboBoxId);
             this.groupBoxCard.Controls.Add(this.buttonEditCard);
             this.groupBoxCard.Controls.Add(this.buttonDeleteCard);
             this.groupBoxCard.Controls.Add(this.buttonAddNewCard);
@@ -319,31 +315,14 @@
             this.buttonTakeSelected.Name = "buttonTakeSelected";
             this.buttonTakeSelected.Size = new System.Drawing.Size(154, 50);
             this.buttonTakeSelected.TabIndex = 35;
-            this.buttonTakeSelected.Text = "Take selected book";
+            this.buttonTakeSelected.Text = "Take selected book with the selected card";
             this.buttonTakeSelected.UseVisualStyleBackColor = true;
-            // 
-            // buttonTakeById
-            // 
-            this.buttonTakeById.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonTakeById.Location = new System.Drawing.Point(179, 276);
-            this.buttonTakeById.Name = "buttonTakeById";
-            this.buttonTakeById.Size = new System.Drawing.Size(154, 31);
-            this.buttonTakeById.TabIndex = 34;
-            this.buttonTakeById.Text = "Take book by ID";
-            this.buttonTakeById.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxId
-            // 
-            this.comboBoxId.FormattingEnabled = true;
-            this.comboBoxId.Location = new System.Drawing.Point(187, 244);
-            this.comboBoxId.Name = "comboBoxId";
-            this.comboBoxId.Size = new System.Drawing.Size(135, 21);
-            this.comboBoxId.TabIndex = 33;
+            this.buttonTakeSelected.Click += new System.EventHandler(this.buttonTakeSelected_Click);
             // 
             // buttonEditCard
             // 
             this.buttonEditCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEditCard.Location = new System.Drawing.Point(19, 276);
+            this.buttonEditCard.Location = new System.Drawing.Point(179, 276);
             this.buttonEditCard.Name = "buttonEditCard";
             this.buttonEditCard.Size = new System.Drawing.Size(154, 31);
             this.buttonEditCard.TabIndex = 32;
@@ -365,7 +344,7 @@
             // buttonAddNewCard
             // 
             this.buttonAddNewCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddNewCard.Location = new System.Drawing.Point(19, 239);
+            this.buttonAddNewCard.Location = new System.Drawing.Point(19, 276);
             this.buttonAddNewCard.Name = "buttonAddNewCard";
             this.buttonAddNewCard.Size = new System.Drawing.Size(154, 31);
             this.buttonAddNewCard.TabIndex = 30;
@@ -376,7 +355,7 @@
             // labelExpirationDate
             // 
             this.labelExpirationDate.AutoSize = true;
-            this.labelExpirationDate.Location = new System.Drawing.Point(5, 194);
+            this.labelExpirationDate.Location = new System.Drawing.Point(5, 214);
             this.labelExpirationDate.Name = "labelExpirationDate";
             this.labelExpirationDate.Size = new System.Drawing.Size(80, 13);
             this.labelExpirationDate.TabIndex = 27;
@@ -385,7 +364,7 @@
             // labeldateCreated
             // 
             this.labeldateCreated.AutoSize = true;
-            this.labeldateCreated.Location = new System.Drawing.Point(13, 154);
+            this.labeldateCreated.Location = new System.Drawing.Point(13, 168);
             this.labeldateCreated.Name = "labeldateCreated";
             this.labeldateCreated.Size = new System.Drawing.Size(72, 13);
             this.labeldateCreated.TabIndex = 26;
@@ -394,14 +373,14 @@
             // dateTimePickerExpirationDate
             // 
             this.dateTimePickerExpirationDate.Enabled = false;
-            this.dateTimePickerExpirationDate.Location = new System.Drawing.Point(88, 190);
+            this.dateTimePickerExpirationDate.Location = new System.Drawing.Point(88, 210);
             this.dateTimePickerExpirationDate.Name = "dateTimePickerExpirationDate";
             this.dateTimePickerExpirationDate.Size = new System.Drawing.Size(141, 20);
             this.dateTimePickerExpirationDate.TabIndex = 18;
             // 
             // dateTimePickerDateCreated
             // 
-            this.dateTimePickerDateCreated.Location = new System.Drawing.Point(88, 150);
+            this.dateTimePickerDateCreated.Location = new System.Drawing.Point(88, 165);
             this.dateTimePickerDateCreated.Name = "dateTimePickerDateCreated";
             this.dateTimePickerDateCreated.Size = new System.Drawing.Size(141, 20);
             this.dateTimePickerDateCreated.TabIndex = 25;
@@ -409,7 +388,7 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(88, 110);
+            this.textBoxEmail.Location = new System.Drawing.Point(88, 120);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(234, 20);
             this.textBoxEmail.TabIndex = 24;
@@ -417,7 +396,7 @@
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(50, 113);
+            this.labelEmail.Location = new System.Drawing.Point(50, 122);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(35, 13);
             this.labelEmail.TabIndex = 23;
@@ -425,7 +404,7 @@
             // 
             // textBoxEgn
             // 
-            this.textBoxEgn.Location = new System.Drawing.Point(88, 70);
+            this.textBoxEgn.Location = new System.Drawing.Point(88, 75);
             this.textBoxEgn.Name = "textBoxEgn";
             this.textBoxEgn.Size = new System.Drawing.Size(234, 20);
             this.textBoxEgn.TabIndex = 22;
@@ -433,7 +412,7 @@
             // labelEGN
             // 
             this.labelEGN.AutoSize = true;
-            this.labelEGN.Location = new System.Drawing.Point(52, 73);
+            this.labelEGN.Location = new System.Drawing.Point(52, 76);
             this.labelEGN.Name = "labelEGN";
             this.labelEGN.Size = new System.Drawing.Size(33, 13);
             this.labelEGN.TabIndex = 21;
@@ -481,7 +460,6 @@
             this.pictureBoxMagnifyingGlass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMagnifyingGlass.TabIndex = 8;
             this.pictureBoxMagnifyingGlass.TabStop = false;
-            this.pictureBoxMagnifyingGlass.Click += new System.EventHandler(this.pictureBoxMagnifyingGlass_Click);
             // 
             // textBoxSearch
             // 
@@ -500,7 +478,7 @@
             this.dataGridViewCards.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewCards.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewCards.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCards.Location = new System.Drawing.Point(373, 206);
+            this.dataGridViewCards.Location = new System.Drawing.Point(372, 206);
             this.dataGridViewCards.Name = "dataGridViewCards";
             this.dataGridViewCards.ReadOnly = true;
             this.dataGridViewCards.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -525,6 +503,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 377);
+            this.Controls.Add(this.groupBoxCard);
             this.Controls.Add(this.comboBoxSearchFor);
             this.Controls.Add(this.dataGridViewCards);
             this.Controls.Add(this.pictureBoxMagnifyingGlass);
@@ -532,7 +511,6 @@
             this.Controls.Add(this.dataGridViewBooks);
             this.Controls.Add(this.comboBoxSelection);
             this.Controls.Add(this.groupBoxBook);
-            this.Controls.Add(this.groupBoxCard);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(812, 416);
             this.MinimumSize = new System.Drawing.Size(812, 416);
@@ -592,8 +570,6 @@
         private System.Windows.Forms.Label labelTakenBy;
         private System.Windows.Forms.ComboBox comboBoxSearchFor;
         private System.Windows.Forms.Button buttonTakeSelected;
-        private System.Windows.Forms.Button buttonTakeById;
-        private System.Windows.Forms.ComboBox comboBoxId;
         private System.Windows.Forms.Button buttonSaveBook;
     }
 }
