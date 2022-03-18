@@ -8,23 +8,42 @@ using Data.Model;
 
 namespace Business
 {
+    /// <summary>
+    /// Represents the set of functionality of the GUI elements at program startup
+    /// </summary>
     public class BookBusiness
     {
         private LibraryContext libraryContext;
+
+        /// <summary>
+        /// Initiates a new instance of the BookBusiness class by setting specific initial values
+        /// </summary>
         public BookBusiness()
         {
             this.libraryContext = new LibraryContext();
         }
+        /// <summary>
+        /// Gets all books from database
+        /// </summary>
+        /// <returns> Collection of Books </returns>
         public List<Book> GetAllBooks()
         {
             return libraryContext.Books.ToList();
         }
-
+        /// <summary>
+        /// Gets a book by specific id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Element of Book type</returns>
         public Book GetBookWithId(int id)
         {
             return libraryContext.Books.Find(id);
         }
-
+        /// <summary>
+        /// Search for a specific books by their title
+        /// </summary>
+        /// <param name="searchedText"></param>
+        /// <returns>Collection of Books</returns>
         public List<Book> SearchBooks(string searchedText)
         {
             List<Book> foundBooks = new List<Book>();
@@ -45,13 +64,19 @@ namespace Business
             }
             return foundBooks;
         }
-
+        /// <summary>
+        /// Adds a book to the current context
+        /// </summary>
+        /// <param name="book"></param>
         public void AddBook(Book book)
         {
             libraryContext.Books.Add(book);
             libraryContext.SaveChanges();
         }
-
+        /// <summary>
+        /// Updates a book to the current context
+        /// </summary>
+        /// <param name="book"></param>
         public void UpdateBook(Book book)
         {
             Book updatedBook = libraryContext.Books.Find(book.BookId);
@@ -61,7 +86,10 @@ namespace Business
                 libraryContext.SaveChanges();
             }
         }
-
+        /// <summary>
+        /// Delets a book to the current context
+        /// </summary>
+        /// <param name="id"></param>
         public void DeleteBook(int id)
         {
             Book product = libraryContext.Books.Find(id);
