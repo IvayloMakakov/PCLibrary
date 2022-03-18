@@ -20,10 +20,10 @@ namespace Business
             libraryContext.BookCardRelations.Add(bookCardRelations);
             libraryContext.SaveChanges();
         }
-        public ICollection<BookCardRelations> GetRelationsByBookId(int bookId)
+        /*public ICollection<BookCardRelations> GetRelationsByBookId(int bookId)
         {
             ///////????????????????????
             return null;
-        }
+        }*/
     }
 }

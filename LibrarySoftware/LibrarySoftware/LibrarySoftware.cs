@@ -18,6 +18,19 @@ namespace LibrarySoftware
         public LibraryCardBusiness cardBusiness;
         public BookCardRelationsBusiness relationsBusiness;
 
+        private void UpdateGrid()
+        {
+            try
+            {
+                this.dataGridViewBooks.DataSource = this.bookBusiness.GetAllBooks();
+                this.dataGridViewCards.DataSource = this.cardBusiness.GetAllCards();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when updating data grid.");
+            }
+        }
+
         public FormLibrarySoftware()
         {
             InitializeComponent();
@@ -37,8 +50,10 @@ namespace LibrarySoftware
             comboBoxSearchFor.SelectedIndex = 0;
 
             this.UpdateGrid();
-            dataGridViewBooks.Columns.RemoveAt(6);
-            dataGridViewCards.Columns.RemoveAt(6);
+            dataGridViewBooks.Columns.Add("TakenBy", "CurrentlyTakenBy");
+            dataGridViewCards.Columns.Add("TakenBook", "LastBookTaken");
+            dataGridViewBooks.Columns[dataGridViewBooks.Columns.Count - 1].DisplayIndex = dataGridViewBooks.Columns.Count - 2;
+            dataGridViewCards.Columns[dataGridViewCards.Columns.Count - 1].DisplayIndex = dataGridViewCards.Columns.Count - 2;
         }
 
         private void comboBoxSelection_SelectedIndexChanged(object sender, EventArgs e)
@@ -117,6 +132,7 @@ namespace LibrarySoftware
                     bookCardRelation.BookId = book.BookId;
 
                     this.relationsBusiness.CreateRelation(bookCardRelation);
+                    dataGridViewBooks.Rows[dataGridViewBooks.Rows.Count - 1].Cells["TakenBy"].Value = (object)libraryCard.EGN;
                 }
                 else
                 {
@@ -134,19 +150,6 @@ namespace LibrarySoftware
                 MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the add book button.");
             }
 
-        }
-
-        private void UpdateGrid()
-        {
-            try
-            {
-                this.dataGridViewBooks.DataSource = this.bookBusiness.GetAllBooks();
-                this.dataGridViewCards.DataSource = this.cardBusiness.GetAllCards();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when updating data grid.");
-            }
         }
 
         private void buttonAddNewCard_Click(object sender, EventArgs e)
