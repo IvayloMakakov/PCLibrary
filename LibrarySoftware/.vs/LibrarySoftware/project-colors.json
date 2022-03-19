@@ -25,7 +25,12 @@
       "ProjectGuid": "ff11674e-e4a9-4b30-bf17-032f09668ae0",
       "DisplayName": "LibrarySoftware.Tests",
       "ColorIndex": 3
+    },
+    "2e74e13c-98f2-4484-98f5-1b40eafc31ab": {
+      "ProjectGuid": "2e74e13c-98f2-4484-98f5-1b40eafc31ab",
+      "DisplayName": "LibrarySoft.Tests",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 5
 }

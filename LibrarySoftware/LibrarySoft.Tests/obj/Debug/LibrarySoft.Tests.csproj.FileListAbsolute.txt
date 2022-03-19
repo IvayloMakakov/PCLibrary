@@ -1,0 +1,15 @@
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\LibrarySoft.Tests.dll
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\LibrarySoft.Tests.pdb
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug\LibrarySoft.Tests.csproj.AssemblyReference.cache
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug\LibrarySoft.Tests.csproj.CoreCompileInputs.cache
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug\LibrarySoft.Tests.csproj.CopyComplete
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug\LibrarySoft.Tests.dll
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug\LibrarySoft.Tests.pdb
