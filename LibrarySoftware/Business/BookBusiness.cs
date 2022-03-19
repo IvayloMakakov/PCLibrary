@@ -61,6 +61,14 @@ namespace Business
                 {
                     foundBooks.Add(book);
                 }
+                else if (book.DateTaken.Value.ToString().ToLower().Contains(searchedText.ToLower()))
+                {
+                    foundBooks.Add(book);
+                }
+                else if (book.DateReturned.Value.ToString().ToLower().Contains(searchedText.ToLower()))
+                {
+                    foundBooks.Add(book);
+                }
             }
             return foundBooks;
         }

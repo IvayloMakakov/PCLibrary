@@ -62,6 +62,14 @@ namespace Business
                 {
                     foundCards.Add(card);
                 }
+                else if (card.DateCreated.ToString().ToLower().Contains(searchedText.ToLower()))
+                {
+                    foundCards.Add(card);
+                }
+                else if (card.ExpirationDate.ToString().ToLower().Contains(searchedText.ToLower()))
+                {
+                    foundCards.Add(card);
+                }
             }
             return foundCards;
         }
