@@ -12,6 +12,9 @@ using Data.Model;
 
 namespace LibrarySoftware
 {
+    /// <summary>
+    /// Represents the set of functionality of the GUI elements at program startup
+    /// </summary>
     public partial class FormLibrarySoftware : Form
     {
         public BookBusiness bookBusiness;
@@ -20,6 +23,10 @@ namespace LibrarySoftware
         private int selectedId;
         private int selectedIndex;
 
+        /// <summary>
+        /// Updates data in data grids
+        /// </summary>
+        /// <exception cref="System.Exception"></exception>
         private void UpdateGrid()
         {
             try
@@ -61,7 +68,9 @@ namespace LibrarySoftware
                 MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when updating data grid.");
             }
         }
-
+        /// <summary>
+        /// Initiates a new instance of the FormLibrarySoftware class by setting specific initial values 
+        /// </summary>
         public FormLibrarySoftware()
         {
             InitializeComponent();
@@ -87,7 +96,11 @@ namespace LibrarySoftware
             //
             this.UpdateGrid();
         }
-
+        /// <summary>
+        /// Changes the data entry form according to the selected criteria
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBoxSelection_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxSelection.Text == "Books")
@@ -102,7 +115,11 @@ namespace LibrarySoftware
                 groupBoxCard.Location = groupBoxBook.Location;
             }
         }
-
+        /// <summary>
+        /// Adds additional date entry fields depending on the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void checkBoxTaken_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxTaken.Checked)
@@ -124,23 +141,38 @@ namespace LibrarySoftware
                 comboBoxTakenByWho.Visible = false;
             }
         }
-
+        /// <summary>
+        /// Adds an additional 30 days from the entered date to the deadline
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dateTimePickerTaken_ValueChanged(object sender, EventArgs e)
         {
             dateTimePickerReturn.Value = dateTimePickerTaken.Value.AddDays(30);
         }
-
+        /// <summary>
+        /// Adds an additional 1 year from the entered date to the expiration date
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dateTimePickerDateCreated_ValueChanged(object sender, EventArgs e)
         {
             dateTimePickerExpirationDate.Value = dateTimePickerDateCreated.Value.AddYears(1);
         }
-
+        /// <summary>
+        /// Sets appropriate values to the expiration date and return date
+        /// </summary>
         private void SetDates()
         {
             dateTimePickerReturn.Value = dateTimePickerTaken.Value.AddDays(30);
             dateTimePickerExpirationDate.Value = dateTimePickerDateCreated.Value.AddYears(1);
         }
-
+        /// <summary>
+        /// Adds a book to the database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <exception cref="System.Exception"></exception>
         private void buttonAddBook_Click(object sender, EventArgs e)
         {
             try
@@ -183,7 +215,10 @@ namespace LibrarySoftware
             }
 
         }
-
+        /// <summary>
+        /// Adds a card to the database
+        /// </summary>
+        /// <exception cref="System.Exception"></exception>
         private void buttonAddNewCard_Click(object sender, EventArgs e)
         {
             try
@@ -206,7 +241,10 @@ namespace LibrarySoftware
             }
 
         }
-
+        /// <summary>
+        /// Deletes a book from database
+        /// </summary>
+        /// <exception cref="System.Exception"></exception>
         private void buttonDeleteBook_Click(object sender, EventArgs e)
         {
             try
@@ -223,7 +261,10 @@ namespace LibrarySoftware
             }
 
         }
-
+        /// <summary>
+        /// Deletes a card from database
+        /// </summary>
+        /// <exception cref="System.Exception"></exception>
         private void buttonDeleteCard_Click(object sender, EventArgs e)
         {
             try
@@ -239,7 +280,11 @@ namespace LibrarySoftware
                 MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the delete card button.");
             }
         }
-
+        /// <summary>
+        /// Sets default values
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormLibrarySoftware_Load(object sender, EventArgs e)
         {
             buttonEditBook.PerformClick();
@@ -258,7 +303,9 @@ namespace LibrarySoftware
             SetDates();
 
         }
-
+        /// <summary>
+        /// Edits a book from database
+        /// </summary>
         private void buttonEditBook_Click(object sender, EventArgs e)
         {
             if (dataGridViewBooks.SelectedRows.Count > 0)
@@ -275,7 +322,9 @@ namespace LibrarySoftware
 
         }
 
-
+        /// <summary>
+        /// Updates text boxes from book form
+        /// </summary>
         private void UpdateTextBoxesBooks(int id)
         {
             Book book = this.bookBusiness.GetBookWithId(id);
@@ -293,7 +342,10 @@ namespace LibrarySoftware
             }
             SetDates();
         }
-
+        /// <summary>
+        /// Edits a card from database
+        /// </summary>
+        /// <exception cref="System.Exception"></exception>
         private void buttonEditCard_Click(object sender, EventArgs e)
         {
             if (dataGridViewCards.SelectedRows.Count > 0)
@@ -304,7 +356,9 @@ namespace LibrarySoftware
                 UpdateTextBoxesCards(this.selectedId);
             }
         }
-
+        /// <summary>
+        /// Updates text boxes from card form
+        /// </summary>
         private void UpdateTextBoxesCards(int id)
         {
             LibraryCard card = this.cardBusiness.GetCardWithId(id);
@@ -314,7 +368,11 @@ namespace LibrarySoftware
             dateTimePickerDateCreated.Value = card.DateCreated;
             dateTimePickerExpirationDate.Value = card.ExpirationDate;
         }
-
+        /// <summary>
+        /// Saves all entered information from the book form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSaveBook_Click(object sender, EventArgs e)
         {
             Book book = new Book();
@@ -342,17 +400,27 @@ namespace LibrarySoftware
             buttonEditBook.Visible = true;
             buttonSaveBook.Visible = false;
         }
-
+        /// <summary>
+        /// Initializes data source by returning a List<Book> collection
+        /// </summary>
+        /// <param name="searchedString"></param>
         private void BookSearch(string searchedString)
         {
             dataGridViewBooks.DataSource = bookBusiness.SearchBooks(searchedString);
         }
-
+        /// <summary>
+        /// Initializes data source by returning a List<LibraryCard> collection
+        /// </summary>
+        /// <param name="searchedString"></param>
         private void CardSearch(string searchedString)
         {
             dataGridViewCards.DataSource = cardBusiness.SearchCards(searchedString);
         }
-
+        /// <summary>
+        /// Filters the selected data grid according to the selected criteria
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             if (comboBoxSearchFor.SelectedIndex == 0)
@@ -365,7 +433,11 @@ namespace LibrarySoftware
             }
 
         }
-
+        /// <summary>
+        /// Gets selected row and creates a relation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonTakeSelected_Click(object sender, EventArgs e)
         {
             DataGridViewCellCollection row = dataGridViewBooks.SelectedRows[0].Cells;
