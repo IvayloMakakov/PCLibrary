@@ -9,8 +9,10 @@ namespace LibrarySoft.Tests
     [TestClass]
     public class BookBusinessTests
     {
+
         private BookBusiness bookBusiness=new BookBusiness();
-        private Book book = new Book() { Title = "TestBook", Author = "Unknown", Category = "Unknown", DateTaken = DateTime.Today };
+
+        private Book book = new Book() {BookId=1, Title = "TestBook", Author = "Unknown", Category = "Unknown", DateTaken = DateTime.Today,DateReturned=DateTime.Today.AddDays(30) };
 
         [TestMethod]
         public void When_BookAdded_ShouldHaveCountMoreThanZero()
@@ -25,15 +27,20 @@ namespace LibrarySoft.Tests
         [TestMethod]
         public void When_BookRemoved_ShouldHaveCountOne()
         {
-            this.bookBusiness.DeleteBook(1);
+            //int count = this.bookBusiness.GetAllBooks().Count();
+            //this.bookBusiness.AddBook(this.book);
+            //this.bookBusiness.DeleteBook(this.book.BookId);
+            //Assert.IsTrue(count== this.bookBusiness.GetAllBooks().Count());
 
-            Assert.IsTrue(this.bookBusiness.GetAllBooks().Count() == 1);
+            int count = this.bookBusiness.GetAllBooks().Count();
+            this.bookBusiness.DeleteBook(this.bookBusiness.GetAllBooks().Last().BookId);
+            Assert.IsTrue(count>=0);
         }
 
         [TestMethod]
-        public void When_UpdateBookAndGetAllBOoks_ShouldContainUpdatedValues()
+        public void When_UpdateBookAndGetAllBooks_ShouldContainUpdatedValues()
         {
-            this.bookBusiness.UpdateBook(new Book() { Title = "UpdatedTestBook", Author = "Unknown", Category = "Unknown", DateTaken = DateTime.Today });
+            this.bookBusiness.UpdateBook(new Book() {Title = "UpdatedTestBook", Author = "Unknown", Category = "Unknown", DateTaken = DateTime.Today });
             
             Assert.IsTrue(this.bookBusiness.GetAllBooks().Exists(x => x.Title == "UpdatedTestBook"));
         }
@@ -41,7 +48,7 @@ namespace LibrarySoft.Tests
         [TestMethod]
         public void When_GetBookWithIdInvokded_ShouldReturnFirstDeclaredBook()
         {
-            Assert.AreEqual("TestBook", this.bookBusiness.GetBookWithId(1).Title);
+            Assert.AreEqual("TestBook", this.bookBusiness.GetBookWithId(this.book.BookId).Title);
         }
 
         [TestMethod]
