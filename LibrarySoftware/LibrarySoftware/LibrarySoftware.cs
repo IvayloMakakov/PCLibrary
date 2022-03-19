@@ -88,7 +88,11 @@ namespace LibrarySoftware
             {
                 cardBusiness.DeleteExpiredCard(card);
             }
-            comboBoxSearchFor.SelectedIndex = 0;
+            if (cardBusiness.GetAllCards().Count > 0)
+            {
+                comboBoxSearchFor.SelectedIndex = 0;
+            }
+
 
 
             dataGridViewBooks.Columns.Add("TakenBy", "CurrentlyTakenBy");
@@ -258,11 +262,14 @@ namespace LibrarySoftware
         {
             try
             {
-                DataGridViewCellCollection row = dataGridViewBooks.SelectedRows[0].Cells;
-                this.selectedId = (int)row[1].Value;
-                bookBusiness.DeleteBook(this.selectedId);
-                UpdateGrid();
-                dataGridViewBooks.ClearSelection();
+                if (this.bookBusiness.GetAllBooks().Count > 0)
+                {
+                    DataGridViewCellCollection row = dataGridViewBooks.SelectedRows[0].Cells;
+                    this.selectedId = (int)row[1].Value;
+                    bookBusiness.DeleteBook(this.selectedId);
+                    UpdateGrid();
+                    dataGridViewBooks.ClearSelection();
+                }
             }
             catch (Exception ex)
             {
@@ -279,11 +286,15 @@ namespace LibrarySoftware
         {
             try
             {
-                DataGridViewCellCollection row = dataGridViewCards.SelectedRows[0].Cells;
-                this.selectedId = (int)row[1].Value;
-                cardBusiness.DeleteCard(this.selectedId);
-                UpdateGrid();
-                dataGridViewBooks.ClearSelection();
+                if (this.cardBusiness.GetAllCards().Count > 0)
+                {
+                    DataGridViewCellCollection row = dataGridViewCards.SelectedRows[0].Cells;
+                    this.selectedId = (int)row[1].Value;
+                    cardBusiness.DeleteCard(this.selectedId);
+                    UpdateGrid();
+                    dataGridViewBooks.ClearSelection();
+                }
+
             }
             catch (Exception ex)
             {
@@ -300,12 +311,10 @@ namespace LibrarySoftware
         {
             try
             {
-
-
                 if (this.bookBusiness.GetAllBooks().Count > 0)
                 {
                     buttonEditBook.PerformClick();
-                    buttonSaveBook.PerformClick(); ;
+                    buttonSaveBook.PerformClick(); 
                 }
                 else
                 {
@@ -318,14 +327,17 @@ namespace LibrarySoftware
                     textBoxAuthor.Text = null;
                     textBoxCategory.Text = null;
                     dateTimePickerTaken.Value = DateTime.Today;
-                    comboBoxTakenByWho.SelectedIndex = 0;
+                    if (this.cardBusiness.GetAllCards().Count > 0)
+                    {
+                        comboBoxTakenByWho.SelectedIndex = 0;
+                    }
 
                     SetDates();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the delete card button.");
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when loading the form.");
                 Application.Exit();
             }
         }
@@ -405,7 +417,7 @@ namespace LibrarySoftware
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the delete card button.");
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the edit card button.");
                 Application.Exit();
             }
         }
@@ -483,7 +495,7 @@ namespace LibrarySoftware
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the delete card button.");
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the save book button.");
                 Application.Exit();
             }
         }
@@ -575,7 +587,7 @@ namespace LibrarySoftware
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the delete card button.");
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the save card button.");
                 Application.Exit();
             }
         }
