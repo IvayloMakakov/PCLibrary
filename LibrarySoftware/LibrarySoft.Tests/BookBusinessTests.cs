@@ -9,13 +9,13 @@ namespace LibrarySoft.Tests
     [TestClass]
     public class BookBusinessTests
     {
-        private BookBusiness bookBusiness;
+        private BookBusiness bookBusiness = new BookBusiness();
         private Book book = new Book() { Title = "TestBook", Author = "Unknown", Category = "Unknown", DateTaken = DateTime.Today };
 
         [TestMethod]
         public void When_BookAdded_ShouldHaveCountMoreThanZero()
         {
-            this.bookBusiness = new BookBusiness();
+            //this.bookBusiness = new BookBusiness();
 
             this.bookBusiness.AddBook(this.book);
 
