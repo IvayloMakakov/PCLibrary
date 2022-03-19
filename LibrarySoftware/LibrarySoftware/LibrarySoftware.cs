@@ -213,6 +213,7 @@ namespace LibrarySoftware
 
 
                 UpdateGrid();
+                ClearTextBoxes();
             }
             catch (Exception ex)
             {
@@ -234,7 +235,7 @@ namespace LibrarySoftware
                 card.FullName = textBoxFullName.Text;
 
                 //Промяна
-                int.Parse(textBoxEgn.Text);
+                long.Parse(textBoxEgn.Text);
                 if (textBoxEgn.Text.Length != 10) throw new ArgumentException("EGN must be 10 characters");
 
 
@@ -245,6 +246,7 @@ namespace LibrarySoftware
 
                 this.cardBusiness.AddCard(card);
                 UpdateGrid();
+                ClearTextBoxes();
                 comboBoxTakenByWho.Items.Add(card.Id + ", " + card.FullName);
             }
             catch (Exception ex)
