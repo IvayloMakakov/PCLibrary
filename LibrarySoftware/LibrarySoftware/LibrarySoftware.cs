@@ -66,6 +66,7 @@ namespace LibrarySoftware
             catch (Exception ex)
             {
                 MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when updating data grid.");
+                Application.Exit();
             }
         }
         /// <summary>
@@ -211,7 +212,7 @@ namespace LibrarySoftware
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the add book button.","Try again");
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the add book button.", "Try again");
                 Application.Exit();
             }
 
@@ -244,7 +245,7 @@ namespace LibrarySoftware
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the add new card button.","Try again");
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the add new card button.", "Try again");
                 Application.Exit();
             }
 
@@ -266,6 +267,7 @@ namespace LibrarySoftware
             catch (Exception ex)
             {
                 MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the delete book button.");
+                Application.Exit();
             }
 
         }
@@ -286,6 +288,7 @@ namespace LibrarySoftware
             catch (Exception ex)
             {
                 MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the delete card button.");
+                Application.Exit();
             }
         }
         /// <summary>
@@ -295,42 +298,64 @@ namespace LibrarySoftware
         /// <param name="e"></param>
         private void FormLibrarySoftware_Load(object sender, EventArgs e)
         {
-            buttonEditBook.PerformClick();
-            buttonSaveBook.PerformClick();;
-            textBoxFullName.Text = null;
-            textBoxEgn.Text = null;
-            textBoxEmail.Text = null;
-            dateTimePickerDateCreated.Value = DateTime.Today;
+            try
+            {
 
-            textBoxTitle.Text = null;
-            textBoxAuthor.Text = null;
-            textBoxCategory.Text = null;
-            dateTimePickerTaken.Value = DateTime.Today;
-            comboBoxTakenByWho.SelectedIndex = 0;
 
-            SetDates();
+                if (this.bookBusiness.GetAllBooks().Count > 0)
+                {
+                    buttonEditBook.PerformClick();
+                    buttonSaveBook.PerformClick(); ;
+                }
+                else
+                {
+                    textBoxFullName.Text = null;
+                    textBoxEgn.Text = null;
+                    textBoxEmail.Text = null;
+                    dateTimePickerDateCreated.Value = DateTime.Today;
 
+                    textBoxTitle.Text = null;
+                    textBoxAuthor.Text = null;
+                    textBoxCategory.Text = null;
+                    dateTimePickerTaken.Value = DateTime.Today;
+                    comboBoxTakenByWho.SelectedIndex = 0;
+
+                    SetDates();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the delete card button.");
+                Application.Exit();
+            }
         }
         /// <summary>
         /// Edits a book from database
         /// </summary>
         private void buttonEditBook_Click(object sender, EventArgs e)
         {
-            //ПРОМЯНА
-            buttonAddBook.Visible = false;
-            buttonDeleteBook.Visible = false;
-            if (dataGridViewBooks.SelectedRows.Count > 0)
+            try
             {
-                var item = dataGridViewBooks.SelectedRows[0].Cells;
-                this.selectedId = (int)item[1].Value;
-                this.selectedIndex = this.bookBusiness.GetAllBooks().IndexOf(this.bookBusiness.GetBookWithId(selectedId));
-                UpdateTextBoxesBooks(this.selectedId);
-                buttonEditBook.Visible = false;
-                buttonSaveBook.Visible = true;
-                dataGridViewBooks.Enabled = false;
-                UpdateGrid();
+                //ПРОМЯНА
+                buttonAddBook.Visible = false;
+                buttonDeleteBook.Visible = false;
+                if (dataGridViewBooks.SelectedRows.Count > 0)
+                {
+                    var item = dataGridViewBooks.SelectedRows[0].Cells;
+                    this.selectedId = (int)item[1].Value;
+                    this.selectedIndex = this.bookBusiness.GetAllBooks().IndexOf(this.bookBusiness.GetBookWithId(selectedId));
+                    UpdateTextBoxesBooks(this.selectedId);
+                    buttonEditBook.Visible = false;
+                    buttonSaveBook.Visible = true;
+                    dataGridViewBooks.Enabled = false;
+                    UpdateGrid();
+                }
             }
-          
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when editing a card.");
+                Application.Exit();
+            }
         }
 
         /// <summary>
@@ -359,19 +384,29 @@ namespace LibrarySoftware
         /// <exception cref="System.Exception"></exception>
         private void buttonEditCard_Click(object sender, EventArgs e)
         {
-            //ПРОМЯНА
-            buttonAddNewCard.Visible = false;
-            buttonDeleteCard.Visible = false;
-            buttonTakeSelected.Visible = false;
-            if (dataGridViewCards.SelectedRows.Count > 0)
+            try
             {
-                var item = dataGridViewCards.SelectedRows[0].Cells;
-                this.selectedId = (int)item[1].Value;
-                this.selectedIndex = this.cardBusiness.GetAllCards().IndexOf(this.cardBusiness.GetCardWithId(selectedId));
-                UpdateTextBoxesCards(this.selectedId);
-                buttonEditCard.Visible = false;
-                buttonSaveCard.Visible = true;
-                dataGridViewCards.Enabled = false;
+
+
+                //ПРОМЯНА
+                buttonAddNewCard.Visible = false;
+                buttonDeleteCard.Visible = false;
+                buttonTakeSelected.Visible = false;
+                if (dataGridViewCards.SelectedRows.Count > 0)
+                {
+                    var item = dataGridViewCards.SelectedRows[0].Cells;
+                    this.selectedId = (int)item[1].Value;
+                    this.selectedIndex = this.cardBusiness.GetAllCards().IndexOf(this.cardBusiness.GetCardWithId(selectedId));
+                    UpdateTextBoxesCards(this.selectedId);
+                    buttonEditCard.Visible = false;
+                    buttonSaveCard.Visible = true;
+                    dataGridViewCards.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the delete card button.");
+                Application.Exit();
             }
         }
         private void ClearTextBoxes()
@@ -411,36 +446,46 @@ namespace LibrarySoftware
         /// <param name="e"></param>
         private void buttonSaveBook_Click(object sender, EventArgs e)
         {
-            Book book = new Book();
-            book.BookId = selectedId;
-            book.Title = textBoxTitle.Text;
-            book.Author = textBoxAuthor.Text;
-            book.Category = textBoxCategory.Text;
-            if (checkBoxTaken.Checked)
+            try
             {
-                book.DateTaken = dateTimePickerTaken.Value;
-                book.DateReturned = dateTimePickerReturn.Value;
-                BookCardRelations editedRelations = new BookCardRelations();
-                editedRelations.BookId = book.BookId;
-                editedRelations.LibraryCardId = int.Parse(comboBoxTakenByWho.SelectedItem.ToString().Split(',').ToArray()[0]);
-                relationsBusiness.CreateRelation(editedRelations);
-            }
-            else
-            {
-                book.DateTaken = null;
-                book.DateReturned = null;
-            }
 
 
-            bookBusiness.UpdateBook(book);
-            UpdateGrid();
-            ClearTextBoxes();
-            dataGridViewBooks.Enabled = true;
-            buttonEditBook.Visible = true;
-            buttonSaveBook.Visible = false;
-            //ПРОМЯНА
-            buttonAddBook.Visible = true;
-            buttonDeleteBook.Visible = true;
+                Book book = new Book();
+                book.BookId = selectedId;
+                book.Title = textBoxTitle.Text;
+                book.Author = textBoxAuthor.Text;
+                book.Category = textBoxCategory.Text;
+                if (checkBoxTaken.Checked)
+                {
+                    book.DateTaken = dateTimePickerTaken.Value;
+                    book.DateReturned = dateTimePickerReturn.Value;
+                    BookCardRelations editedRelations = new BookCardRelations();
+                    editedRelations.BookId = book.BookId;
+                    editedRelations.LibraryCardId = int.Parse(comboBoxTakenByWho.SelectedItem.ToString().Split(',').ToArray()[0]);
+                    relationsBusiness.CreateRelation(editedRelations);
+                }
+                else
+                {
+                    book.DateTaken = null;
+                    book.DateReturned = null;
+                }
+
+
+                bookBusiness.UpdateBook(book);
+                UpdateGrid();
+                ClearTextBoxes();
+                dataGridViewBooks.Enabled = true;
+                buttonEditBook.Visible = true;
+                buttonSaveBook.Visible = false;
+                //ПРОМЯНА
+                buttonAddBook.Visible = true;
+                buttonDeleteBook.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the delete card button.");
+                Application.Exit();
+            }
         }
         /// <summary>
         /// Initializes data source by returning a List<Book> collection
@@ -501,28 +546,38 @@ namespace LibrarySoftware
 
         private void buttonSaveCard_Click(object sender, EventArgs e)
         {
-            LibraryCard card = new LibraryCard();
-            card.Id = selectedId;
-            card.FullName = textBoxFullName.Text;
-
-            card.EGN = textBoxEgn.Text;
-            card.Email = textBoxEmail.Text;
-            card.DateCreated = dateTimePickerDateCreated.Value;
-            card.ExpirationDate = dateTimePickerExpirationDate.Value;
-
-            
+            try
+            {
 
 
-            cardBusiness.UpdateCard(card);
-            UpdateGrid();
-            ClearTextBoxes();
-            dataGridViewCards.Enabled = true;
-            buttonEditCard.Visible = true;
-            buttonSaveCard.Visible = false;
+                LibraryCard card = new LibraryCard();
+                card.Id = selectedId;
+                card.FullName = textBoxFullName.Text;
 
-            buttonAddNewCard.Visible = true;
-            buttonDeleteCard.Visible = true;
-            buttonTakeSelected.Visible = true;
+                card.EGN = textBoxEgn.Text;
+                card.Email = textBoxEmail.Text;
+                card.DateCreated = dateTimePickerDateCreated.Value;
+                card.ExpirationDate = dateTimePickerExpirationDate.Value;
+
+
+
+
+                cardBusiness.UpdateCard(card);
+                UpdateGrid();
+                ClearTextBoxes();
+                dataGridViewCards.Enabled = true;
+                buttonEditCard.Visible = true;
+                buttonSaveCard.Visible = false;
+
+                buttonAddNewCard.Visible = true;
+                buttonDeleteCard.Visible = true;
+                buttonTakeSelected.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the delete card button.");
+                Application.Exit();
+            }
         }
     }
 }
