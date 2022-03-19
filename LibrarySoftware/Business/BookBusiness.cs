@@ -61,11 +61,11 @@ namespace Business
                 {
                     foundBooks.Add(book);
                 }
-                else if (book.DateTaken.Value.ToString().ToLower().Contains(searchedText.ToLower()))
+                else if (book.DateTaken.ToString().ToLower().Contains(searchedText.ToLower()))
                 {
                     foundBooks.Add(book);
                 }
-                else if (book.DateReturned.Value.ToString().ToLower().Contains(searchedText.ToLower()))
+                else if (book.DateReturned.ToString().ToLower().Contains(searchedText.ToLower()))
                 {
                     foundBooks.Add(book);
                 }

@@ -89,3 +89,22 @@ D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.
 D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.CopyComplete
 D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.dll
 D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.dll.config
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.xml
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csprojAssemblyReference.cache
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.Initial.resources
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableBooks.resources
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableCards.resources
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.NullableDates.resources
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.RelationsUpdate.resources
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.HashSets.resources
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.GenerateResource.cache
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.CopyComplete
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.pdb

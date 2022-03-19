@@ -73,3 +73,18 @@ D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Business\obj\Debug\Business
 D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.csproj.CopyComplete
 D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.dll
 D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\bin\Debug\Business.dll.config
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\bin\Debug\Business.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\bin\Debug\Business.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\bin\Debug\Data.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\bin\Debug\EntityFramework.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\bin\Debug\Data.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\bin\Debug\Data.dll.config
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\bin\Debug\EntityFramework.xml
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.csprojAssemblyReference.cache
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.csproj.CopyComplete
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\Business\obj\Debug\Business.pdb

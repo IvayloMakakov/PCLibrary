@@ -85,3 +85,32 @@ D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug
 D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug\LibrarySoft.Tests.csproj.CopyComplete
 D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug\LibrarySoft.Tests.dll
 D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug\LibrarySoft.Tests.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\LibrarySoft.Tests.dll.config
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\LibrarySoft.Tests.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\LibrarySoft.Tests.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Business.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Data.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\LibrarySoftware.exe
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Business.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Business.dll.config
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Data.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Data.dll.config
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\LibrarySoftware.pdb
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\LibrarySoftware.exe.config
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug\LibrarySoft.Tests.csprojAssemblyReference.cache
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug\LibrarySoft.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug\LibrarySoft.Tests.csproj.CopyComplete
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug\LibrarySoft.Tests.dll
+C:\Users\Viki\Documents\Library Ivo and Viktor\New PCLibrary\PCLibrary\LibrarySoftware\LibrarySoft.Tests\obj\Debug\LibrarySoft.Tests.pdb

@@ -3,6 +3,7 @@ using Data;
 using Data.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace LibrarySoft.Tests
@@ -53,9 +54,10 @@ namespace LibrarySoft.Tests
         [TestMethod]
         public void When_SearchBookInvoked_ShouldReturnCollectionOfOneOrTwoBooks()
         {
-            var collection = this.bookBusiness.SearchBooks("Book");
+            this.bookBusiness.AddBook(this.book);
+            List<Book> collection = this.bookBusiness.SearchBooks("Book");
 
-            Assert.IsTrue(collection.Count >= 2);
+            Assert.IsTrue(collection.Count >= 1);
         }
     }
 }
