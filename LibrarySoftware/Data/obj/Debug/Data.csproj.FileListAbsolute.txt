@@ -70,3 +70,22 @@ D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.C
 D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.CopyComplete
 D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.dll
 D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.pdb
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.dll.config
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.dll
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.pdb
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.dll
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.xml
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.AssemblyReference.cache
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.Initial.resources
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableBooks.resources
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableCards.resources
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.NullableDates.resources
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.RelationsUpdate.resources
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.HashSets.resources
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.GenerateResource.cache
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.CopyComplete
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.dll
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.pdb

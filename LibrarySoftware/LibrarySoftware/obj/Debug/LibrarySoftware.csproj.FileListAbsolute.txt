@@ -94,3 +94,25 @@ D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\Li
 D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.CopyComplete
 D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.exe
 D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.pdb
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\LibrarySoftware.exe.config
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\LibrarySoftware.exe
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\LibrarySoftware.pdb
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Business.dll
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Data.dll
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.dll
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.SqlServer.dll
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Business.pdb
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Business.dll.config
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Data.pdb
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\Data.dll.config
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.xml
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\bin\Debug\EntityFramework.SqlServer.xml
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.AssemblyReference.cache
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.SuggestedBindingRedirects.cache
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.FormLibrarySoftware.resources
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.Properties.Resources.resources
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.GenerateResource.cache
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.CoreCompileInputs.cache
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.csproj.CopyComplete
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.exe
+D:\THE MAIN ACTUAL LIBRARY\PCLibrary\LibrarySoftware\LibrarySoftware\obj\Debug\LibrarySoftware.pdb
