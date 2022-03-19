@@ -28,32 +28,30 @@ namespace LibrarySoft.Tests
         [TestMethod]
         public void When_BookRemoved_ShouldHaveCountOne()
         {
-            //int count = this.bookBusiness.GetAllBooks().Count();
-            //this.bookBusiness.AddBook(this.book);
-            //this.bookBusiness.DeleteBook(this.book.BookId);
-            //Assert.IsTrue(count== this.bookBusiness.GetAllBooks().Count());
-
             int count = this.bookBusiness.GetAllBooks().Count();
-            this.bookBusiness.DeleteBook(this.bookBusiness.GetAllBooks().Last().BookId);
-            Assert.IsTrue(count>=0);
+            this.bookBusiness.AddBook(this.book);
+            this.bookBusiness.DeleteBook(this.book.BookId);
+            Assert.IsTrue(count == this.bookBusiness.GetAllBooks().Count());
         }
 
         [TestMethod]
         public void When_UpdateBookAndGetAllBooks_ShouldContainUpdatedValues()
         {
-            this.bookBusiness.UpdateBook(new Book() {Title = "UpdatedTestBook", Author = "Unknown", Category = "Unknown", DateTaken = DateTime.Today });
+            this.bookBusiness.AddBook(this.book);
+            this.bookBusiness.UpdateBook(new Book() {BookId = this.book.BookId, Title = "UpdatedTestBook", Author = "Unknown", Category = "Unknown", DateTaken = DateTime.Today });
             
             Assert.IsTrue(this.bookBusiness.GetAllBooks().Exists(x => x.Title == "UpdatedTestBook"));
         }
 
         [TestMethod]
-        public void When_GetBookWithIdInvokded_ShouldReturnFirstDeclaredBook()
+        public void When_GetBookWithIdInvoked_ShouldReturnFirstDeclaredBook()
         {
+            this.bookBusiness.AddBook(this.book);
             Assert.AreEqual("TestBook", this.bookBusiness.GetBookWithId(this.book.BookId).Title);
         }
 
         [TestMethod]
-        public void When_SearchBookInvkoed_ShouldReturnCollectionOfOneOrTwoBooks()
+        public void When_SearchBookInvoked_ShouldReturnCollectionOfOneOrTwoBooks()
         {
             var collection = this.bookBusiness.SearchBooks("Book");
 
