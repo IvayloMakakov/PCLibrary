@@ -211,7 +211,8 @@ namespace LibrarySoftware
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the add book button.");
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the add book button.","Try again");
+                Application.Exit();
             }
 
         }
@@ -226,6 +227,12 @@ namespace LibrarySoftware
                 LibraryCard card = new LibraryCard();
 
                 card.FullName = textBoxFullName.Text;
+
+                //Промяна
+                int.Parse(textBoxEgn.Text);
+                if (textBoxEgn.Text.Length != 10) throw new ArgumentException("EGN must be 10 characters");
+
+
                 card.EGN = textBoxEgn.Text;
                 card.Email = textBoxEmail.Text;
                 card.DateCreated = dateTimePickerDateCreated.Value;
@@ -237,7 +244,8 @@ namespace LibrarySoftware
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the add new card button.");
+                MessageBox.Show($"The error \"{ex.Message}\" is the cause of the failed operation when clicking the add new card button.","Try again");
+                Application.Exit();
             }
 
         }
@@ -308,6 +316,9 @@ namespace LibrarySoftware
         /// </summary>
         private void buttonEditBook_Click(object sender, EventArgs e)
         {
+            //ПРОМЯНА
+            buttonAddBook.Visible = false;
+            buttonDeleteBook.Visible = false;
             if (dataGridViewBooks.SelectedRows.Count > 0)
             {
                 var item = dataGridViewBooks.SelectedRows[0].Cells;
@@ -319,7 +330,7 @@ namespace LibrarySoftware
                 dataGridViewBooks.Enabled = false;
                 UpdateGrid();
             }
-
+          
         }
 
         /// <summary>
@@ -348,6 +359,10 @@ namespace LibrarySoftware
         /// <exception cref="System.Exception"></exception>
         private void buttonEditCard_Click(object sender, EventArgs e)
         {
+            //ПРОМЯНА
+            buttonAddNewCard.Visible = false;
+            buttonDeleteCard.Visible = false;
+            buttonTakeSelected.Visible = false;
             if (dataGridViewCards.SelectedRows.Count > 0)
             {
                 var item = dataGridViewCards.SelectedRows[0].Cells;
@@ -423,6 +438,9 @@ namespace LibrarySoftware
             dataGridViewBooks.Enabled = true;
             buttonEditBook.Visible = true;
             buttonSaveBook.Visible = false;
+            //ПРОМЯНА
+            buttonAddBook.Visible = true;
+            buttonDeleteBook.Visible = true;
         }
         /// <summary>
         /// Initializes data source by returning a List<Book> collection
@@ -486,6 +504,7 @@ namespace LibrarySoftware
             LibraryCard card = new LibraryCard();
             card.Id = selectedId;
             card.FullName = textBoxFullName.Text;
+
             card.EGN = textBoxEgn.Text;
             card.Email = textBoxEmail.Text;
             card.DateCreated = dateTimePickerDateCreated.Value;
@@ -500,6 +519,10 @@ namespace LibrarySoftware
             dataGridViewCards.Enabled = true;
             buttonEditCard.Visible = true;
             buttonSaveCard.Visible = false;
+
+            buttonAddNewCard.Visible = true;
+            buttonDeleteCard.Visible = true;
+            buttonTakeSelected.Visible = true;
         }
     }
 }

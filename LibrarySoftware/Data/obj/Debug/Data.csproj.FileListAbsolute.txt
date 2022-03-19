@@ -51,3 +51,22 @@ C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.d
 C:\Users\Student\Desktop\Library\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.pdb
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.RelationsUpdate.resources
 C:\Users\Viki\Documents\Library Ivo and Viktor\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.HashSets.resources
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.dll.config
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.dll
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\Data.pdb
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.dll
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.xml
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.AssemblyReference.cache
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.Initial.resources
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableBooks.resources
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.TableCards.resources
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.NullableDates.resources
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.RelationsUpdate.resources
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.Migrations.HashSets.resources
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.GenerateResource.cache
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.csproj.CopyComplete
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.dll
+D:\THEACTUALACTUALLIBRARY\PCLibrary\LibrarySoftware\Data\obj\Debug\Data.pdb

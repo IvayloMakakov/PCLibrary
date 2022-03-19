@@ -63,12 +63,12 @@
             this.labelEGN = new System.Windows.Forms.Label();
             this.textBoxFullName = new System.Windows.Forms.TextBox();
             this.labelFullName = new System.Windows.Forms.Label();
+            this.buttonSaveCard = new System.Windows.Forms.Button();
             this.dataGridViewBooks = new System.Windows.Forms.DataGridView();
             this.pictureBoxMagnifyingGlass = new System.Windows.Forms.PictureBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.dataGridViewCards = new System.Windows.Forms.DataGridView();
             this.comboBoxSearchFor = new System.Windows.Forms.ComboBox();
-            this.buttonSaveCard = new System.Windows.Forms.Button();
             this.groupBoxBook.SuspendLayout();
             this.groupBoxCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).BeginInit();
@@ -436,6 +436,18 @@
             this.labelFullName.TabIndex = 19;
             this.labelFullName.Text = "Full name:";
             // 
+            // buttonSaveCard
+            // 
+            this.buttonSaveCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSaveCard.Location = new System.Drawing.Point(179, 276);
+            this.buttonSaveCard.Name = "buttonSaveCard";
+            this.buttonSaveCard.Size = new System.Drawing.Size(154, 31);
+            this.buttonSaveCard.TabIndex = 36;
+            this.buttonSaveCard.Text = "Save";
+            this.buttonSaveCard.UseVisualStyleBackColor = true;
+            this.buttonSaveCard.Visible = false;
+            this.buttonSaveCard.Click += new System.EventHandler(this.buttonSaveCard_Click);
+            // 
             // dataGridViewBooks
             // 
             this.dataGridViewBooks.AllowUserToAddRows = false;
@@ -445,7 +457,7 @@
             this.dataGridViewBooks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewBooks.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBooks.Location = new System.Drawing.Point(373, 46);
+            this.dataGridViewBooks.Location = new System.Drawing.Point(372, 46);
             this.dataGridViewBooks.Name = "dataGridViewBooks";
             this.dataGridViewBooks.ReadOnly = true;
             this.dataGridViewBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -499,18 +511,6 @@
             this.comboBoxSearchFor.Name = "comboBoxSearchFor";
             this.comboBoxSearchFor.Size = new System.Drawing.Size(18, 21);
             this.comboBoxSearchFor.TabIndex = 10;
-            // 
-            // buttonSaveCard
-            // 
-            this.buttonSaveCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSaveCard.Location = new System.Drawing.Point(179, 276);
-            this.buttonSaveCard.Name = "buttonSaveCard";
-            this.buttonSaveCard.Size = new System.Drawing.Size(154, 31);
-            this.buttonSaveCard.TabIndex = 36;
-            this.buttonSaveCard.Text = "Save";
-            this.buttonSaveCard.UseVisualStyleBackColor = true;
-            this.buttonSaveCard.Visible = false;
-            this.buttonSaveCard.Click += new System.EventHandler(this.buttonSaveCard_Click);
             // 
             // FormLibrarySoftware
             // 

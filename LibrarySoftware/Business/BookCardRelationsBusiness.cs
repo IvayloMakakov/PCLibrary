@@ -34,7 +34,11 @@ namespace Business
             libraryContext.BookCardRelations.Add(bookCardRelations);
             libraryContext.SaveChanges();
         }
-
+        /// <summary>
+        /// Gets the last library card by specific id
+        /// </summary>
+        /// <param name="bookId"></param>
+        /// <returns></returns>
         public LibraryCard GetLastLibraryCardByBookId(int bookId)
         {
             List<int> libraryCardsId = libraryContext.BookCardRelations.Where(r => r.BookId == bookId).Select(r => r.LibraryCardId).ToList();
@@ -46,7 +50,11 @@ namespace Business
             LibraryCardBusiness libraryCardBusiness = new LibraryCardBusiness();
             return libraryCardBusiness.GetCardWithId(libraryCardsId.Last());
         }
-
+        /// <summary>
+        /// Gets the last book by specific id
+        /// </summary>
+        /// <param name="cardId"></param>
+        /// <returns></returns>
         public Book GetLastBookByLibraryCard(int cardId)
         {
             List<int> booksId = libraryContext.BookCardRelations.Where(r => r.LibraryCardId == cardId).Select(r => r.BookId).ToList();
