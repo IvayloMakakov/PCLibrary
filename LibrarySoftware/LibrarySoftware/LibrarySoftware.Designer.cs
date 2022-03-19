@@ -68,6 +68,7 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.dataGridViewCards = new System.Windows.Forms.DataGridView();
             this.comboBoxSearchFor = new System.Windows.Forms.ComboBox();
+            this.buttonSaveCard = new System.Windows.Forms.Button();
             this.groupBoxBook.SuspendLayout();
             this.groupBoxCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBooks)).BeginInit();
@@ -301,6 +302,7 @@
             this.groupBoxCard.Controls.Add(this.labelEGN);
             this.groupBoxCard.Controls.Add(this.textBoxFullName);
             this.groupBoxCard.Controls.Add(this.labelFullName);
+            this.groupBoxCard.Controls.Add(this.buttonSaveCard);
             this.groupBoxCard.Location = new System.Drawing.Point(362, 0);
             this.groupBoxCard.Name = "groupBoxCard";
             this.groupBoxCard.Size = new System.Drawing.Size(339, 374);
@@ -498,6 +500,18 @@
             this.comboBoxSearchFor.Size = new System.Drawing.Size(18, 21);
             this.comboBoxSearchFor.TabIndex = 10;
             // 
+            // buttonSaveCard
+            // 
+            this.buttonSaveCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSaveCard.Location = new System.Drawing.Point(179, 276);
+            this.buttonSaveCard.Name = "buttonSaveCard";
+            this.buttonSaveCard.Size = new System.Drawing.Size(154, 31);
+            this.buttonSaveCard.TabIndex = 36;
+            this.buttonSaveCard.Text = "Save";
+            this.buttonSaveCard.UseVisualStyleBackColor = true;
+            this.buttonSaveCard.Visible = false;
+            this.buttonSaveCard.Click += new System.EventHandler(this.buttonSaveCard_Click);
+            // 
             // FormLibrarySoftware
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -571,6 +585,7 @@
         private System.Windows.Forms.ComboBox comboBoxSearchFor;
         private System.Windows.Forms.Button buttonTakeSelected;
         private System.Windows.Forms.Button buttonSaveBook;
+        private System.Windows.Forms.Button buttonSaveCard;
     }
 }
 

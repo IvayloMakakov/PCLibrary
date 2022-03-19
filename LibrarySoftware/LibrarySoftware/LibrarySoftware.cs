@@ -298,11 +298,31 @@ namespace LibrarySoftware
         {
             if (dataGridViewCards.SelectedRows.Count > 0)
             {
-                var item = dataGridViewCards.SelectedRows[1].Cells;
+                var item = dataGridViewCards.SelectedRows[0].Cells;
                 this.selectedId = (int)item[1].Value;
                 this.selectedIndex = this.cardBusiness.GetAllCards().IndexOf(this.cardBusiness.GetCardWithId(selectedId));
                 UpdateTextBoxesCards(this.selectedId);
+                buttonEditCard.Visible = false;
+                buttonSaveCard.Visible = true;
+                dataGridViewCards.Enabled = false;
             }
+        }
+
+        private void ClearTextBoxes()
+        {
+            textBoxTitle.Text = null;
+            textBoxAuthor.Text = null;
+            textBoxCategory.Text = null;
+            checkBoxTaken.Checked = false;
+            dateTimePickerTaken.Value = DateTime.Today;
+            comboBoxTakenByWho.SelectedIndex = 0;
+
+            textBoxFullName.Text = null;
+            textBoxEgn.Text = null;
+            textBoxEmail.Text = null;
+            dateTimePickerDateCreated.Value = DateTime.Today;
+
+            SetDates();
         }
 
         private void UpdateTextBoxesCards(int id)
@@ -326,8 +346,10 @@ namespace LibrarySoftware
             {
                 book.DateTaken = dateTimePickerTaken.Value;
                 book.DateReturned = dateTimePickerReturn.Value;
-                //Edit TakenBy column
-                //dataGridViewBooks.Rows[selectedIndex].Cells[0].Value = (object)cardBusiness.GetCardWithId(int.Parse(comboBoxTakenByWho.Text.Split(',').ToArray()[0])).EGN;
+                BookCardRelations editedRelations = new BookCardRelations();
+                editedRelations.BookId = book.BookId;
+                editedRelations.LibraryCardId = int.Parse(comboBoxTakenByWho.SelectedItem.ToString().Split(',').ToArray()[0]);
+                relationsBusiness.CreateRelation(editedRelations);
             }
             else
             {
@@ -338,6 +360,7 @@ namespace LibrarySoftware
 
             bookBusiness.UpdateBook(book);
             UpdateGrid();
+            ClearTextBoxes();
             dataGridViewBooks.Enabled = true;
             buttonEditBook.Visible = true;
             buttonSaveBook.Visible = false;
@@ -385,5 +408,25 @@ namespace LibrarySoftware
             UpdateGrid();
         }
 
+        private void buttonSaveCard_Click(object sender, EventArgs e)
+        {
+            LibraryCard card = new LibraryCard();
+            card.Id = selectedId;
+            card.FullName = textBoxFullName.Text;
+            card.EGN = textBoxEgn.Text;
+            card.Email = textBoxEmail.Text;
+            card.DateCreated = dateTimePickerDateCreated.Value;
+            card.ExpirationDate = dateTimePickerExpirationDate.Value;
+
+            
+
+
+            cardBusiness.UpdateCard(card);
+            UpdateGrid();
+            ClearTextBoxes();
+            dataGridViewCards.Enabled = true;
+            buttonEditCard.Visible = true;
+            buttonSaveCard.Visible = false;
+        }
     }
 }
