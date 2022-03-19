@@ -1,4 +1,5 @@
 ﻿using Business;
+using Data;
 using Data.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -10,14 +11,14 @@ namespace LibrarySoft.Tests
     public class BookBusinessTests
     {
 
-        private BookBusiness bookBusiness=new BookBusiness();
-
-        private Book book = new Book() {BookId=1, Title = "TestBook", Author = "Unknown", Category = "Unknown", DateTaken = DateTime.Today,DateReturned=DateTime.Today.AddDays(30) };
+        private BookBusiness bookBusiness = new BookBusiness();      
+        private Book book = new Book() {Title = "TestBook", Author = "Unknown", Category = "Unknown", DateTaken = DateTime.Today,DateReturned=DateTime.Today.AddDays(30) };
 
         [TestMethod]
         public void When_BookAdded_ShouldHaveCountMoreThanZero()
         {
             //this.bookBusiness = new BookBusiness();
+
 
             this.bookBusiness.AddBook(this.book);
 
